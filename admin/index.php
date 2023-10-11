@@ -4,7 +4,6 @@ include "includes/connect.php";
 
 
 //son đã đến đấy
-//hello
 
 ?>
 
