@@ -13,6 +13,7 @@ include "includes/connect.php";
 
 <!-- luan -->
 <!-- hello -->
+<!-- luan -->
 <div id="wrapper">
 
     <!-- Navigation - thanh bên -->
