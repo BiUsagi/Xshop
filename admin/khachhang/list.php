@@ -23,6 +23,7 @@
                 <th>Hành Động</th>
             </tr>
             <?php
+            //in dskh
             $listkh = khach_hang_select_all();
             foreach ($listkh as $khachhang) {
                 extract($khachhang);
@@ -40,7 +41,7 @@
                     <td><a href="' . $suakh . '"><input type="button" value="Sửa"></a>   
                     <a href="' . $xoakh . '"><input type="button" value="Xóa"></a></td>
                     </tr>';
-            }
+            } 
             ?>
         </table>
     </div>
