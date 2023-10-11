@@ -1,8 +1,8 @@
-<?php 
-    include "dao/pdo.php";
-    include "includes/connect.php";
-    
-    
+<?php
+include "dao/pdo.php";
+include "includes/connect.php";
+
+
 ?>
 
 <!-- Header -->
@@ -12,37 +12,40 @@
 
 <div id="wrapper">
 
-    <!-- Navigation - thanh bên --> 
+    <!-- Navigation - thanh bên -->
     <?php include "includes/admin_navigation.php"; ?>
-    <!-- End Navigation--> 
+    <!-- End Navigation-->
 
     <?php
 
-        if(isset($_GET['act'])){
-            $act=$_GET['act'];
-            switch ($act) {
-                case 'adddm':
-                    include "danhmuc/index-danhmuc.php";
-                    break;
+    if (isset($_GET['act'])) {
+        $act = $_GET['act'];
+        switch ($act) {
+            case 'adddm':
+                include "danhmuc/index-danhmuc.php";
+                break;
 
-                case 'thongke':
-                    include "danhmuc/category.php";
-                    break;        
+            case 'hanghoa':
+                include "danhmuc/category.php";
+                break;
 
-                case 'thonge':
-                    include "danhmuc/category.php";
-                    break;     
+            case 'khachhang':
+                include "khachhang/index-khachhang.php";
+                break;
 
-                default:
-                    include "includes/admin_home.php";
-                    break;
-            }
+            case 'thonge':
+                include "danhmuc/category.php";
+                break;
+
+            default:
+                include "includes/admin_home.php";
+                break;
         }
-        else{
-            include "includes/admin_home.php";
-        }
-    
-    
+    } else {
+        include "includes/admin_home.php";
+    }
+
+
     ?>
 
 
@@ -54,6 +57,6 @@
 
 
 
-<!-- footer -->
-<?php include "includes/admin_footer.php"; ?>
-<!-- end footer -->
+    <!-- footer -->
+    <?php include "includes/admin_footer.php"; ?>
+    <!-- end footer -->

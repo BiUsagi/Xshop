@@ -43,7 +43,7 @@
                         <a href="./index.php?act=addhh"> Hàng Hóa</a>
                     </li>
                     <li>
-                        <a href="./index.php?act=dskh"> Khách Hàng</a>
+                        <a href="./index.php?act=khachhang&khachhang=home"> Khách Hàng</a>
                     </li>
                     <li>
                         <a href="./index.php?act=dsbl"> Bình Luận</a>
