@@ -4,7 +4,13 @@ include "includes/connect.php";
 
 
 //son đã đến đấy
+<<<<<<< HEAD
 // son
+=======
+//cho tao về
+//chán ghê ha
+
+>>>>>>> 77336d38fee30a1cabacb0fa981759937df708e7
 
 ?>
 
