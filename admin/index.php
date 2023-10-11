@@ -14,7 +14,8 @@ include "includes/connect.php";
 <?php include "includes/admin_header.php"; ?>
 <!-- End Header -->
 
-
+<!-- luan -->
+<!-- hello -->
 <div id="wrapper">
 
     <!-- Navigation - thanh bên -->
