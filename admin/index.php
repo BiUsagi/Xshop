@@ -3,17 +3,12 @@ include "dao/pdo.php";
 include "includes/connect.php";
 
 
-//son đã đến đấy
-//dat oi
 ?>
 
 <!-- Header -->
 <?php include "includes/admin_header.php"; ?>
 <!-- End Header -->
 
-<!-- luan -->
-<!-- hello -->
-<!-- luan -->
 <div id="wrapper">
 
     <!-- Navigation - thanh bên -->
