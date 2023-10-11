@@ -12,6 +12,7 @@ include "includes/connect.php";
 <!-- End Header -->
 
 <!-- luan -->
+<!-- hello -->
 <div id="wrapper">
 
     <!-- Navigation - thanh bên -->
