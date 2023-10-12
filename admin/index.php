@@ -2,15 +2,6 @@
 include "dao/pdo.php";
 include "includes/connect.php";
 
-
-<<<<<<< HEAD
-//son đã đến đấy
-//cho tao về
-//chán ghê 
-
-
-=======
->>>>>>> 244a770e69700ddef4bc41c21f2d2a410b3ec61e
 ?>
 
 <!-- Header -->
