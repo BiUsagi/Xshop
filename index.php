@@ -1,5 +1,5 @@
 <?php include "./includes/header.php";?>
-<?php include "./includes/db.php";?>
+<?php include "./includes/conncect.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,8 @@
     <div class="container">
 
         <div class="row">
+
+
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">

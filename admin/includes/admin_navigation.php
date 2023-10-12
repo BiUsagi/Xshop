@@ -15,7 +15,7 @@
 
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Nhóm 2 <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -40,7 +40,7 @@
                         <a href="./index.php?act=adddm&danhmuc=home"> Danh Mục</a>
                     </li>
                     <li>
-                        <a href="./index.php?act=addhh"> Hàng Hóa</a>
+                        <a href="./index.php?act=addhh&hanghoa=home"> Hàng Hóa</a>
                     </li>
                     <li>
                         <a href="./index.php?act=khachhang&khachhang=home"> Khách Hàng</a>

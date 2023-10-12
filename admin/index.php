@@ -24,8 +24,8 @@ include "includes/connect.php";
                 include "danhmuc/index-danhmuc.php";
                 break;
 
-            case 'hanghoa':
-                include "danhmuc/category.php";
+            case 'addhh':
+                include "sanpham/index-hanghoa.php";
                 break;
 
             case 'khachhang':
