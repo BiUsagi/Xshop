@@ -9,6 +9,7 @@ if (is_array($sp)) {
                     $img = "no photo";
                 }
 }
+
 ?>
 
 
@@ -44,7 +45,9 @@ if (is_array($sp)) {
             <?php
                 if(isset($img)) echo $img;
             ?>
-            <input type="file" name="hinh" >
+            
+            <input type="file" name="hinh" value="<?php if(isset($hinh)) echo $hinh; ?>">
+            
         </div>
         <div class=" mb10">
             Ngày nhập<br>
