@@ -10,7 +10,7 @@
             </div>
             <div class="mb-3">
                 <label for="ten_loai" class="form-label">Tên loại</label>
-                <input type="text" id="ten_loai" name="ten_loai" class="form-control">
+                <input type="text" id="ten_loai" name="ten_loai" class="form-control" required>
             </div>
             <div class="mb-3">
                 <input type="submit" value="THÊM MỚI" name="themmoi" class="btn btn-primary">

@@ -4,7 +4,7 @@ $listdanhmuc = loai_select_all();
 
 <div class="col-md-6 offset-md-3">
     <div class="frmtitle ">
-        <h1>THÊM MỚI SẢN PHẨM</h1>
+        <h1>THÊM SẢN PHẨM</h1>
     </div>
     <div class="frmcontent">
         <form action="index.php?act=addhh&hanghoa=addsp" method="post" enctype="multipart/form-data">
@@ -14,7 +14,7 @@ $listdanhmuc = loai_select_all();
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
                         extract($danhmuc);
-                        echo '<option value="' . $ma_loai . '">' . $ten_loai . '</option>';
+                        echo '<option value="' . $ma_loai . '">' . $ten_loai . ' - ' . $ma_loai . '</option>';
                     }
                     ?>
                 </select>

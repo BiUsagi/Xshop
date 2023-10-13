@@ -1,4 +1,7 @@
 <?php
+
+$listdanhmuc = loai_select_all();
+
 if (is_array($sp)) {
     extract($sp);
 
@@ -14,15 +17,42 @@ if (is_array($sp)) {
 
 
 <div class=" frmtitle">
-    <h1> CẬP NHẬT LOẠI HÀNG </h1>
+    <h1> CẬP NHẬT SẢN PHẨM </h1>
 </div>
 <div class=" frmcontent">
 
     <form action="index.php?act=addhh&&hanghoa=updatesp" method="post" enctype="multipart/form-data">
-        <div class=" mb10">
-            Mã loại <br>
-            <input type="text" name="ma_loai" value="<?php if(isset($ma_loai)) echo $ma_loai; ?>">
-        </div>
+
+        <div class="mb-3">
+                <label for="ma_loai" class="form-label">Loại</label>
+                <select name="ma_loai" class="form-select">
+                <?php
+                    $ma_loai2 = $ma_loai;
+                    
+
+                    foreach ($listdanhmuc as $danhmuc) {
+                        extract($danhmuc);
+                        if($ma_loai2 == $ma_loai){
+                            echo '<option value="' . $ma_loai . '">' . $ten_loai . ' - ' . $ma_loai . '</option>';
+                            break;
+                        }
+                    }
+                    
+
+                ?>
+                    <?php
+                    foreach ($listdanhmuc as $danhmuc) {
+                        extract($danhmuc);
+                        if($ma_loai2 == $ma_loai){
+                            continue;
+                        }
+                        echo '<option value="' . $ma_loai . '">' . $ten_loai . ' - ' . $ma_loai . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
+
+        
         <div class=" mb10">
             Mã sản phẩm <br>
             <input type="text" name="ma_hh" value="<?php if(isset($ma_hh)) echo $ma_hh; ?>" disabled>
