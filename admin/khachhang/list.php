@@ -3,11 +3,13 @@
     <h1> DANH SÁCH KHÁCH HÀNG </h1>
 </div>
 <div class="fracontent">
-    <div style="margin-bottom: 10px;">
-        <input type="button" value="Chọn tất cả">
-        <input type="button" value="Bỏ chọn tất cả">
-        <input type="button" value="Xóa các mục đã chọn">
-        <a href="index.php?act=adddm&danhmuc=themdm"><input type="button" value="Nhập thêm"></a>
+    <div class="mb-3" style="margin-bottom: 10px;">
+        <input type="button" class="btn btn-primary" value="Chọn tất cả">
+        <input type="button" class="btn btn-secondary" value="Bỏ chọn tất cả">
+        <input type="button" class="btn btn-danger" value="Xóa các mục đã chọn">
+        <a href="index.php?act=khachhang&khachhang=home" class="btn btn-success">
+            Nhập thêm
+        </a>
     </div>
     <div class=" mb10 frmdsloai">
         <table class="table table-bordered table-hover">
@@ -38,8 +40,10 @@
                     <td>' . $hinh . '</td> 
                     <td>' . $email . '</td> 
                     <td>' . $vai_tro . '</td> 
-                    <td><a href="' . $suakh . '"><input type="button" value="Sửa"></a>   
-                    <a href="' . $xoakh . '"><input type="button" value="Xóa"></a></td>
+                    <td>
+                        <a href="' . $suakh . '"><button class="btn btn-primary">Sửa</button></a>
+                        <a href="' . $xoakh .'"><button class="btn btn-danger">Xóa</button></a>
+                    </td>
                     </tr>';
             } 
             ?>

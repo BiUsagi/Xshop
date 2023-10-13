@@ -2,11 +2,20 @@
     <h1> DANH SÁCH HÀNG HÓA </h1>
 </div>
 <div class=" fracontent">
-    <div class=" mb10" style="margin-bottom: 10px;">
+    <!-- <div class=" mb10" style="margin-bottom: 10px;">
         <input type="button" value="Chọn tất cả">
         <input type="button" value="Bỏ chọn tất cả">
         <input type="button" value=Xóa các mục đã chọn>
         <a href="index.php?act=addhh&hanghoa=addsp"><input type="button" value="Nhập thêm"></a>
+    </div> -->
+
+    <div class="mb-3" style="margin-bottom: 10px;">
+        <input type="button" class="btn btn-primary" value="Chọn tất cả">
+        <input type="button" class="btn btn-secondary" value="Bỏ chọn tất cả">
+        <input type="button" class="btn btn-danger" value="Xóa các mục đã chọn">
+        <a href="index.php?act=addhh&hanghoa=addsp" class="btn btn-success">
+            Nhập thêm
+        </a>
     </div>
 
     <div class=" mb10 frmdsloai">
@@ -19,7 +28,7 @@
                 <th> GIÁ </th>
                 <th> LƯỢT XEM </th>
                 <th> MÃ LOẠI</th>
-                <th></th>
+                <th>HÀNH ĐỘNG</th>
             </tr>
             <?php
             $listsanpham = hang_hoa_select_all();
@@ -38,15 +47,15 @@
 
 
                 echo '<tr>
-                        <td><input type="checkbox" name=" id=""></td>
+                        <td><input type="checkbox" name="" id=""></td>
                         <td>' . $ma_hh . '</td>
                         <td>' . $ten_hh . '</td> 
                         <td>' . $img . '</td> 
                         <td>' . $don_gia . '</td>
                         <td>' . $so_luot_xem . '</td>  
                         <td>' .$ma_loai. '</td>
-                        <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a>   
-                        <a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
+                        <td><a href="' . $suasp . '"><button class="btn btn-primary">Sửa</button></a>
+                        <a href="' . $xoasp .'"><button class="btn btn-danger">Xóa</button></a></td>
                         </tr>';
             }
             ?>
