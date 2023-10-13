@@ -23,6 +23,7 @@ body {
 
 #page-wrapper {
     width: 100%;
+    min-height: 92vh;
     padding: 0;
     background-color: #fff;
 }
@@ -152,11 +153,12 @@ ul.alert-dropdown {
         top: 51px;
         left: 225px;
         width: 225px;
+        min-height: 96vh;
         margin-left: -225px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        /* background-color: #222; */
     }
 
     .side-nav>li>a {
