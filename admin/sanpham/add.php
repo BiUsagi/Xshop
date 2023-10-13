@@ -9,7 +9,7 @@ $listdanhmuc = loai_select_all();
     <div class="frmcontent">
         <form action="index.php?act=addhh&hanghoa=addsp" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="ma_loai" class="form-label">Tên Loại</label>
+                <label for="ma_loai" class="form-label">Loại</label>
                 <select name="ma_loai" class="form-select">
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
