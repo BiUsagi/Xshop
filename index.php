@@ -1,7 +1,7 @@
 <?php
-include "./dao/connect.php";
-include "./dao/loai.php";
-include "./dao/hang-hoa.php";
+include "includes/connect.php";
+include "includes/dao/loai.php";
+include "includes/dao/hang-hoa.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ include "./dao/hang-hoa.php";
                         extract($hh);
 
 
-                        $hinhpath = "../admin/sanpham/uploads/" . $hinh;
+                        $hinhpath = "admin/sanpham/uploads/" . $hinh;
                         if (is_file($hinhpath)) {
                             $img = "<img src='" . $hinhpath . "' height = '50' >";
                         } else {

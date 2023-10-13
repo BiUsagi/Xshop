@@ -1,6 +1,6 @@
 <?php
 require_once 'pdo.php';
-include "connect.php";
+include "includes/connect.php";
 
 /**
  * Thêm loại mới
