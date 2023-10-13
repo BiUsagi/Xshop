@@ -71,11 +71,26 @@
 
                     case 'updatesp':
                         if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                            $ma_loai = $_POST['ma_loai'];
                             $ten_hh = $_POST['ten_hh'];
                             $ma_hh = $_POST['ma_hh'];
                             $don_gia = $_POST['don_gia'];
                             $giam_gia = $_POST['giam_gia'];
-                            $hinh = $_POST['hinh'];
+
+                            //để tạm
+                            $so_luot_xem = 1;
+                            $dac_biet = 1;
+                            
+                            $hinh = $_FILES['hinh']['name'];
+                            $target_dir = dirname(__FILE__) . '/uploads/';
+                            $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+
+                            if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                                // echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+                            } else {
+                                // echo "Sorry, there was an error uploading your file.";
+                            }
+
                             $ngay_nhap = $_POST['ngay_nhap'];
                             $mo_ta = $_POST['mo_ta'];
                             hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);

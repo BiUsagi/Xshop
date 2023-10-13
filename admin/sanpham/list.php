@@ -13,11 +13,12 @@
         <table class="table table-bordered table-hover">
             <tr>
                 <th></th>
-                <th> MÃ LOẠI </th>
+                <th> MÃ SẢN PHẨM </th>
                 <th> TÊN LOẠI </th>
                 <th> HÌNH </th>
                 <th> GIÁ </th>
                 <th> LƯỢT XEM </th>
+                <th> MÃ LOẠI</th>
                 <th></th>
             </tr>
             <?php
@@ -43,6 +44,7 @@
                         <td>' . $img . '</td> 
                         <td>' . $don_gia . '</td>
                         <td>' . $so_luot_xem . '</td>  
+                        <td>' .$ma_loai. '</td>
                         <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a>   
                         <a href="' . $xoasp . '"><input type="button" value="Xóa"></a></td>
                         </tr>';
