@@ -7,11 +7,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SoWn CMS Admin</a>
+                <a class="navbar-brand" href="./index.php">XSHOP ADMIN</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li><a href="#">HOME SITE</a></li>
+                <li><a href="../index.php">XSHOP</a></li>
 
 
                 <li class="dropdown">

@@ -3,13 +3,13 @@ $listdanhmuc = loai_select_all();
 ?>
 
 <div class="col-md-6 offset-md-3">
-    <div class="frmtitle text-center">
+    <div class="frmtitle ">
         <h1>THÊM MỚI SẢN PHẨM</h1>
     </div>
     <div class="frmcontent">
         <form action="index.php?act=addhh&hanghoa=addsp" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="ma_loai" class="form-label">Mã loại</label>
+                <label for="ma_loai" class="form-label">Tên Loại</label>
                 <select name="ma_loai" class="form-select">
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
