@@ -77,7 +77,10 @@ function hang_hoa_select_page(){
         $row_count = pdo_query_value("SELECT count(*) FROM hang_hoa");
         $_SESSION['page_count'] = ceil($row_count/10.0);
     }
-    if(exist_param("page_no")){
+    // if(exist_param("page_no")){
+    //     $_SESSION['page_no'] = $_REQUEST['page_no'];
+    // }
+    if(isset($_REQUEST['page_no'])){
         $_SESSION['page_no'] = $_REQUEST['page_no'];
     }
     if($_SESSION['page_no'] < 0){
