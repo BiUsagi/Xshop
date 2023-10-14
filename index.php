@@ -14,6 +14,7 @@ include "includes/dao/khach-hang.php"
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
     <div class="boxcenter">
 
@@ -52,14 +53,14 @@ include "includes/dao/khach-hang.php"
 
                         $hinhpath = "admin/sanpham/uploads/" . $hinh;
                         if (is_file($hinhpath)) {
-                            $img = "<img src='" . $hinhpath . "' height = '50' >";
+                            $img = "<img src='" . $hinhpath .   "' style='width: 100%; height: 50; object-fit: cover;' alt='Mô tả ảnh'>";
                         } else {
                             $img = "no photo";
                         }
 
                         echo '    <div class="boxsp mr"> ';
                         
-                        echo '    <div class=" row img">'.$img.'</div> ';
+                        echo '    <div class=" img" >'.$img.'</div> ';
 
                         if ($giam_gia > 0) {
                             echo '    <div id="sale"></div>';
