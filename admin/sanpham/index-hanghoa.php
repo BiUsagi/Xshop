@@ -93,7 +93,16 @@
 
                             $ngay_nhap = $_POST['ngay_nhap'];
                             $mo_ta = $_POST['mo_ta'];
-                            hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+
+                            // hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+
+                           
+                            if ($hinh != ""){
+                                hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+                            } else {
+                                hang_hoa_update_noimg($ma_hh, $ten_hh, $don_gia, $giam_gia, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta);
+                            }
+                            
                         }
 
 
