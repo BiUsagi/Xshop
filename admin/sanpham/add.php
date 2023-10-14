@@ -3,18 +3,18 @@ $listdanhmuc = loai_select_all();
 ?>
 
 <div class="col-md-6 offset-md-3">
-    <div class="frmtitle ">
+    <div class="frmtitle colortwo ">
         <h1>THÊM SẢN PHẨM</h1>
     </div>
     <div class="frmcontent">
-        <form action="index.php?act=addhh&hanghoa=addsp" method="post" enctype="multipart/form-data">
+        <form action="index.php?act=addhh&hanghoa=addsp" method="post" enctype="multipart/form-data" class="colortwo">
             <div class="mb-3">
                 <label for="ma_loai" class="form-label">Loại</label>
-                <select name="ma_loai" class="form-select">
+                <select name="ma_loai" class="form-select colorselect">
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
                         extract($danhmuc);
-                        echo '<option value="' . $ma_loai . '">' . $ten_loai . ' - ' . $ma_loai . '</option>';
+                        echo '<option value="' . $ma_loai . '">' . $ma_loai. ' - ' .  $ten_loai . '</option>';
                     }
                     ?>
                 </select>
@@ -48,7 +48,7 @@ $listdanhmuc = loai_select_all();
                 <textarea name="mo_ta" rows="10" cols="30" class="form-control"></textarea>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3" style="margin-top: 20px;">
                 <input type="submit" value="THÊM MỚI" name="themmoi" class="btn btn-primary">
                 <input type="reset" value="NHẬP LẠI" class="btn btn-secondary">
                 <a href="index.php?act=addhh&hanghoa=list" class="btn btn-primary">DANH SÁCH</a>

@@ -8,7 +8,9 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    /* background-color: #222; */
+    background-color: #252736;
+
 }
 
 @media(min-width:768px) {
@@ -21,12 +23,27 @@ body {
     padding-left: 0;
 }
 
+.colorone{
+    background-color: #6f6486;
+}
+.colortwo{
+    color: #f8f6e6;
+}
+.colortable{
+    background-color: #313348;
+    color: #f8f6e6;
+}
+.colorselect{
+    color: #000;
+}
+
 #page-wrapper {
     width: 100%;
     min-height: 92vh;
     padding: 0;
-    background-color: #fff;
-}
+    /* background-color: #fff; */
+    background-color: #2a2b3d;
+    }
 
 .huge {
     font-size: 50px;
@@ -92,7 +109,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #f8f6e6;
 }
 
 .top-nav>li>a:hover,

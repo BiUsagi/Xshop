@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.php">XSHOP ADMIN</a>
+        <a class="navbar-brand colortwo" href="./index.php">XSHOP ADMIN</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -32,7 +32,7 @@
 
 
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse navbar-ex1-collapse colorone">
         <ul class="nav navbar-nav side-nav">
             <li>
                 <a href="./index.php"> Trang Chủ</a>
