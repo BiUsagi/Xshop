@@ -16,16 +16,16 @@
         <table class="table table-bordered colortable">
             <tr>
                 <th></th>
-                <th> MÃ SẢN PHẨM </th>
-                <th> TÊN SẢN PHẨM </th>
-                <th> HÌNH </th>
-                <th> GIÁ </th>
-                <th> GIẢM GIÁ </th>
-                <th> LƯỢT XEM </th>
-                <th> NGÀY NHẬP</th>
-                <th> MÔ TẢ</th>
-                <th> LOẠI</th>
-                <th>HÀNH ĐỘNG</th>
+                <th class="vertical-center"> MÃ SẢN PHẨM </th>
+                <th class="vertical-center"> TÊN SẢN PHẨM </th>
+                <th class="vertical-center"> HÌNH </th>
+                <th class="vertical-center"> GIÁ </th>
+                <th class="vertical-center"> GIẢM GIÁ(%) </th>
+                <th class="vertical-center"> LƯỢT XEM </th>
+                <th class="vertical-center"> NGÀY NHẬP</th>
+                <th class="vertical-center"> MÔ TẢ</th>
+                <th class="vertical-center"> LOẠI</th>
+                <th class="vertical-center">HÀNH ĐỘNG</th>
             </tr>
             <?php
             $listsanpham = hang_hoa_select_all();
@@ -54,18 +54,22 @@
 
 
                 echo '<tr>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>' . $ma_hh . '</td>
-                        <td>' . $ten_hh . '</td> 
-                        <td>' . $img . '</td> 
-                        <td>' . $don_gia . '</td>
-                        <td>' . $giam_gia . '</td>
-                        <td>' . $so_luot_xem . '</td> 
-                        <td>' . $ngay_nhap . '</td> 
-                        <td>' . $mo_ta . '</td>  
-                        <td>' . 'Loại: ' .$ten_loai_2. "<br>" .'Mã: ' .$ma_loai. '</td>
-                        <td><a href="' . $suasp . '"><button class="btn btn-primary">Sửa</button></a>
-                        <a href="' . $xoasp .'"><button class="btn btn-danger">Xóa</button></a></td>
+                        <td class="center-checkbox small-cell-4">
+                            <input class="large-checkbox" type="checkbox" name="" id="" >
+                        </td>
+                        <td class="center-checkbox">' . $ma_hh . '</td>
+                        <td class=" small-cell-9">' . $ten_hh . '</td> 
+                        <td class="center-checkbox small-cell-9">' . $img . '</td> 
+                        <td class="center-checkbox">' . $don_gia . '</td>
+                        <td class="center-checkbox">' . $giam_gia . '</td>
+                        <td class="center-checkbox">' . $so_luot_xem . '</td> 
+                        <td class="center-checkbox">' . $ngay_nhap . '</td> 
+                        <td >' . $mo_ta . '</td>  
+                        <td class=" small-cell-9">' . 'Loại: ' .$ten_loai_2. "<br>" .'Mã: ' .$ma_loai. '</td>
+                        <td class="small-cell-9 center-checkbox">
+                            <a href="' . $suasp . '"><button class="btn btn-primary">Sửa</button></a>
+                            <a href="' . $xoasp .'"><button class="btn btn-danger">Xóa</button></a>
+                            </td>
                         </tr>';
             }
             ?>

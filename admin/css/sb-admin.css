@@ -18,9 +18,19 @@ body {
         margin-top: 50px;
     }
 }
+.vertical-center {
+    text-align: center;
+}
 
+.center-checkbox {
+    text-align: center;
+    vertical-align: middle;
+}
 #wrapper {
     padding-left: 0;
+}
+.large-checkbox {
+    transform: scale(1.5); /* Điều chỉnh kích thước theo nhu cầu */
 }
 
 .colorone{
@@ -35,6 +45,29 @@ body {
 }
 .colorselect{
     color: #000;
+}
+.table img {
+    width: 100%;
+    height: auto;
+}
+
+.small-cell-4 {
+    width: 4vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
+.small-cell-5 {
+    width: 5vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
+.small-cell-7 {
+    width: 7vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
+.small-cell-8 {
+    width: 8vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
+.small-cell-9 {
+    width: 9vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
+.small-cell-15 {
+    width: 15vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
 }
 
 #page-wrapper {

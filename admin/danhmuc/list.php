@@ -12,11 +12,11 @@
     </div>
     <div class="mb10 frmdsloai">
         <table class="table table-bordered  colortable">
-            <tr>
+            <tr >
                 <th></th>
-                <th> MÃ LOẠI </th>
-                <th>TÊN LOẠI </th>
-                <th>HÀNH ĐỘNG</th>
+                <th  class="vertical-center"> MÃ LOẠI </th>
+                <th class="vertical-center">TÊN LOẠI </th>
+                <th class="vertical-center">HÀNH ĐỘNG</th>
             </tr>
             <?php
             $listdanhmuc = loai_select_all();
@@ -25,10 +25,10 @@
                 $suadm = "index.php?act=adddm&danhmuc=sua&maloai=" . $ma_loai;
                 $xoadm = "index.php?act=adddm&danhmuc=xoa&maloai=" . $ma_loai;
                 echo '<tr>
-                    <td><input type="checkbox" name=" id=""></td>
-                    <td>' . $ma_loai . '</td>
+                    <td class="center-checkbox small-cell-4 "><input class="large-checkbox" type="checkbox" name=" id=""></td>
+                    <td class="center-checkbox small-cell-7 ">' . $ma_loai . '</td>
                     <td>' . $ten_loai . '</td> 
-                    <td>
+                    <td class="small-cell-15 center-checkbox">
                         <a href="' . $suadm . '"><button class="btn btn-primary">Sửa</button></a>
                         <a href="' . $xoadm .'"><button class="btn btn-danger">Xóa</button></a>
                     </td>
