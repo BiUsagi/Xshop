@@ -87,11 +87,11 @@ if (is_array($sp)) {
                     echo $hinh; ?>">
 
             </div>
-            <div class=" mb-3">
+            <!-- <div class=" mb-3">
                 <label for="ngay_nhap" class="form-label">Ngày nhập</label>
                 <input type="date" name="ngay_nhap" class="form-control" value="<?php if (isset($ngay_nhap))
                     echo $ngay_nhap; ?>">
-            </div>
+            </div> -->
             <div class=" mb-3">
                 <label for="mo_ta" class="form-label">Mô tả</label>
                 <textarea name="mo_ta" s="10" cols="30" class="form-control"><?php if (isset($mo_ta))

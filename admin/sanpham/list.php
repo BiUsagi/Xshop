@@ -22,6 +22,7 @@
                 <th> GIÁ </th>
                 <th> GIẢM GIÁ </th>
                 <th> LƯỢT XEM </th>
+                <th> NGÀY NHẬP</th>
                 <th> MÔ TẢ</th>
                 <th> LOẠI</th>
                 <th>HÀNH ĐỘNG</th>
@@ -59,7 +60,8 @@
                         <td>' . $img . '</td> 
                         <td>' . $don_gia . '</td>
                         <td>' . $giam_gia . '</td>
-                        <td>' . $so_luot_xem . '</td>  
+                        <td>' . $so_luot_xem . '</td> 
+                        <td>' . $ngay_nhap . '</td> 
                         <td>' . $mo_ta . '</td>  
                         <td>' . 'Loại: ' .$ten_loai_2. "<br>" .'Mã: ' .$ma_loai. '</td>
                         <td><a href="' . $suasp . '"><button class="btn btn-primary">Sửa</button></a>

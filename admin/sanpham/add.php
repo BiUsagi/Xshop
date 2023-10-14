@@ -21,7 +21,7 @@ $listdanhmuc = loai_select_all();
             </div>
             <div class="mb-3">
                 <label for="ma_hh" class="form-label">Mã sản phẩm</label>
-                <input type="text" name="ma_hh" class="form-control" disabled>
+                <input type="text" name="ma_hh" class="form-control" disabled value="Được tự động thêm" >
             </div>
             <div class="mb-3">
                 <label for="ten_hh" class="form-label">Tên sản phẩm</label>
@@ -39,10 +39,10 @@ $listdanhmuc = loai_select_all();
                 <label for="hinh" class="form-label">Hình ảnh</label>
                 <input type="file" name="hinh" class="form-control">
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="ngay_nhap" class="form-label">Ngày nhập</label>
                 <input type="date" name="ngay_nhap" class="form-control">
-            </div>
+            </div> -->
             <div class="mb-3">
                 <label for="mo_ta" class="form-label">Mô tả</label>
                 <textarea name="mo_ta" rows="10" cols="30" class="form-control"></textarea>

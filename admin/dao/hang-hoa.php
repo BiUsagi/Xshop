@@ -6,13 +6,13 @@ function hang_hoa_insert($ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_bie
     pdo_execute($sql, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet==1, $so_luot_xem, $ngay_nhap, $mo_ta);
 }
 
-function hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta){
-    $sql = "UPDATE hang_hoa SET ten_hh=?,don_gia=?,giam_gia=?,hinh=?,ma_loai=?,dac_biet=?,so_luot_xem=?,ngay_nhap=?,mo_ta=? WHERE ma_hh=?";
-    pdo_execute($sql, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet==1, $so_luot_xem, $ngay_nhap, $mo_ta, $ma_hh);
+function hang_hoa_update($ma_hh, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet, $so_luot_xem, $mo_ta){
+    $sql = "UPDATE hang_hoa SET ten_hh=?,don_gia=?,giam_gia=?,hinh=?,ma_loai=?,dac_biet=?,so_luot_xem=?,mo_ta=? WHERE ma_hh=?";
+    pdo_execute($sql, $ten_hh, $don_gia, $giam_gia, $hinh, $ma_loai, $dac_biet==1, $so_luot_xem, $mo_ta, $ma_hh);
 }
-function hang_hoa_update_noimg($ma_hh, $ten_hh, $don_gia, $giam_gia, $ma_loai, $dac_biet, $so_luot_xem, $ngay_nhap, $mo_ta){
-    $sql = "UPDATE hang_hoa SET ten_hh=?,don_gia=?,giam_gia=?,ma_loai=?,dac_biet=?,so_luot_xem=?,ngay_nhap=?,mo_ta=? WHERE ma_hh=?";
-    pdo_execute($sql, $ten_hh, $don_gia, $giam_gia, $ma_loai, $dac_biet==1, $so_luot_xem, $ngay_nhap, $mo_ta, $ma_hh);
+function hang_hoa_update_noimg($ma_hh, $ten_hh, $don_gia, $giam_gia, $ma_loai, $dac_biet, $so_luot_xem, $mo_ta){
+    $sql = "UPDATE hang_hoa SET ten_hh=?,don_gia=?,giam_gia=?,ma_loai=?,dac_biet=?,so_luot_xem=?,mo_ta=? WHERE ma_hh=?";
+    pdo_execute($sql, $ten_hh, $don_gia, $giam_gia, $ma_loai, $dac_biet==1, $so_luot_xem, $mo_ta, $ma_hh);
 }
 
 function hang_hoa_delete($ma_hh){
