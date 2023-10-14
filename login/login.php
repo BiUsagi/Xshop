@@ -20,7 +20,7 @@
             <form action="login_index.php?act=login" method="post">
 
                 <?php
-                    $logout = "login_index.php?act=logout"; //gan
+                    $logout = "index.php?act=logout"; //gan
                 ?>
 
                 <div class="row mb10">
@@ -40,8 +40,9 @@
                 <div class="row mb10">
 
 
+                
+                <input type="submit" value="Đăng Nhập" id="">
                 <?php echo '<a href="'.$logout.'">logout</a>' ?>
-                    <input type="submit" value="Đăng Nhập" id=""><br>
                 </div>
 
             </form>
