@@ -108,7 +108,7 @@ include "includes/dao/khach-hang.php"
             <div class="boxphai">
                 <?php include"login/login_index.php" ?>
                 <div class="row mb">
-                    <div class="boxtitle">DANH MUC</div>
+                    <div class="boxtitle">DANH MỤC</div>
                     <div class="boxcontent2 menudoc">
                         <ul>
 

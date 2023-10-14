@@ -5,7 +5,7 @@
         <form action="index.php?act=login" method="post">
 
             <?php
-            $logout = "index.php?act=logout"; //gan
+            $res = "index.php?act=res"; //gan
             ?>
 
             <div class="row mb10">
@@ -33,7 +33,7 @@
 
         </form>
         <li><a href="#">Quên mật khẩu</a></li>
-        <li><?php echo '<a href="' . $logout . '">Đăng ký thành viên</a>' ?></li>
+        <li><?php echo '<a href="' . $res . '">Đăng ký thành viên</a>' ?></li>
         
     </div>
 

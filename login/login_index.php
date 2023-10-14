@@ -33,8 +33,8 @@ if (isset($_GET['act'])) {
             include "login.php";
             break;
 
-        case 'khachhang':
-            include "khachhang/index-khachhang.php";
+        case 'res':
+            include "res.php";
             break;
 
         case 'thonge':
