@@ -6,6 +6,7 @@ if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
         case 'logout':
+            $tt = "index.php?act=ttkh&&makh=".($_GET['makh']);
             include "logout.php";
             break;
 
@@ -16,7 +17,6 @@ if (isset($_GET['act'])) {
                 $tendn1 = $_POST['madn'];
                 $mk = $_POST['pass']; 
                 $listkh = khach_hang_select_all();
-                
                 foreach ($listkh as $kh) {
                     extract($kh);
                     if($tendn1 != '' && $mk != ''){
@@ -28,7 +28,7 @@ if (isset($_GET['act'])) {
                             }
                             break;
                         }else{
-                            $thongbao = "Email chưa được đăng ký";
+                            $thongbao = "Tài khoản chưa được đăng ký";
                         }
                     }else $thongbao = "Vui lòng nhập đầy đủ thông tin";
 
@@ -39,12 +39,12 @@ if (isset($_GET['act'])) {
             include "login.php";
             break;
 
-        case 'res':
-            include "res.php";
+        case 'logouttt':
+            include "logout.php";
             break;
 
-        case 'thonge':
-            include "danhmuc/category.php";
+        case 'ttkh':
+            include "thongtin.php";
             break;
 
         default:
