@@ -101,30 +101,33 @@
     border-bottom: 1px #ccc solid;
 }
 .banner{
-   min-height: 300px;
-    width: 100%;
+    min-height: 300px;
+    width: 97.5%;
     background-color: #ffffff;
     text-align: center;
+    margin-bottom: 10px;
 }
 .banner img{
+    width: 100%;
     height: 300px;
    
 }
 .boxsp{
     float: left;
     width: 31.2%;
-    min-height: 300px;
+    min-height: 230px;
     border: #EEE solid;
     border-radius:5px;
     margin-bottom: 20px;
 }
 .boxsp img{
-    min-height: 220px;
-     text-align: center;
+    min-height: 150px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .img img{
     width: 100%;
-    height: 220px;
+    height: 150px;
 }
 .menu ul{
     padding: 10px;
@@ -285,8 +288,44 @@ border: 1px #999 solid;
     border: 1px #999 solid;
 }
 
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 
+#tenhh a{
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 13px;
+}
+.khung_gia{
+    margin-left: 10px;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 13px;
+    color: red;
+}
+.gia_goc{
+    text-decoration: line-through;
+    position: absolute;
+    top: 0;
+    right: -110px;
+    color: #666;
+}
+#sale{
+    width: 60px;
+    height: 40px;
+    background-image: url(../images/salered.png);
+    background-size: cover;
+    position: absolute;
+    top: 2px;
+    right: -8px;
+    z-index: 2;
+}
+.boxsp{
+    position: relative;
+}
 
 
 

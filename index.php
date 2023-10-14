@@ -37,14 +37,17 @@ include "includes/dao/hang-hoa.php";
                         <img src="images/banner.png" alt>
                     </div>
                 </div>
-                <div class="row">
+
+                
+
+                <div class="row" id="tenhh">
 
                     <?php
 
                     $listhh = hang_hoa_select_all();
                     foreach ($listhh as $hh) {
                         extract($hh);
-
+                        
 
                         $hinhpath = "admin/sanpham/uploads/" . $hinh;
                         if (is_file($hinhpath)) {
@@ -54,10 +57,34 @@ include "includes/dao/hang-hoa.php";
                         }
 
                         echo '    <div class="boxsp mr"> ';
-                        echo '     <div class=" row img">'.$img.'</div> ';
-                        echo "     <p> Price:  '.$don_gia.'</p> ";
-                        echo '    <a href="#"> name: '.$ten_hh.'</a> ';
-                        echo '     </div> ';
+                        
+                        echo '    <div class=" row img">'.$img.'</div> ';
+
+                        if ($giam_gia > 0) {
+                            echo '    <div id="sale"></div>';
+                        }else{
+                            echo "";
+                        }
+                        
+
+
+                        echo '    <a href="#"> '.$ten_hh.'</a>';
+
+                        $gia_ban = $don_gia - $giam_gia;
+
+                        echo "    <div class='khung_gia'> ";
+                        echo "    <p class='giahh'> Giá: $gia_ban </p> ";
+
+                        if ($giam_gia > 0) {
+                            $gia_goc = "Giá gốc: " .  $don_gia;
+                        }else{
+                            $gia_goc = "Không giảm giá";
+                        }
+                        echo "    <p class='gia_goc'> $gia_goc </p> ";
+
+                        
+                        echo '    </div> ';
+                        echo '    </div> ';
                     }
                     ?>
 
