@@ -1,5 +1,5 @@
-<?php include "./includes/header.php";?>
-<?php include "./includes/conncect.php";?>
+<?php include "/admin/includes/header.php";?>
+<?php include "/admin/includes/conncect.php";?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,17 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navigation -->
     <?php include "./includes/navigation.php"; ?>
-
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
-
-
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                 <?php
@@ -33,15 +27,12 @@
                         $post_author = $row['post_author'];
                         $post_date = $row['post_date'];
                         $post_image = $row['post_image'];
-                        $post_content = $row['post_content'];
-                        
-                        ?>
-                      
+                        $post_content = $row['post_content'];                      
+                        ?>                     
                     <h1 class="page-header">
                         Page Heading 
                         <small>Secondary Text</small>
                     </h1>
-
                     <!-- First Blog Post -->
                     <div class="card">
                         <h2 class="card-title">
@@ -57,25 +48,17 @@
                         <hr>
                     </div>
                 <?php } ?>
-
-
-
             </div>
-
             <!-- Blog Sidebar Widgets Column -->
             <?php include "./includes/sidebar.php"; ?>
-
         </div>
         <!-- /.row -->
-
         <hr>
-
     </div>
+    
     <!-- /.container -->
-
     <!-- Link to Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Footer -->
     <?php include "./includes/footer.php"; ?>
 
