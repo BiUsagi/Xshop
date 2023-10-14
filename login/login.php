@@ -2,17 +2,15 @@
     <div class="boxtitle">TÀI KHOẢN</div>
     <div class="boxcontent fomttaikhoan">
 
-        <form action="login_index.php?act=login" method="post">
+        <form action="index.php?act=login" method="post">
 
             <?php
             $logout = "index.php?act=logout"; //gan
             ?>
 
             <div class="row mb10">
-                Tên Đăng Nhập <br>
-
-
-                <input type="text" name="user" id=""><br>
+                Tên Đăng Nhập: <br>
+                <input type="text" name="email" id=""><br>
             </div>
             <div class="row mb10">
                 Mật Khẩu
@@ -25,7 +23,10 @@
             <div class="row mb10">
 
 
-
+                <?php
+                    echo $thongbao; 
+                ?>
+                <br>
                 <input type="submit" value="Đăng Nhập" name="dangnhap">
                 
             </div>

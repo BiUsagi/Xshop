@@ -9,10 +9,28 @@ if (isset($_GET['act'])) {
             break;
 
         case 'login':
-            include "login.php";
+            $thongbao = '';
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
+                $email1 = $_POST['email'];
+                $mk = $_POST['pass']; 
+                $listkh = khach_hang_select_all();
                 
+                foreach ($listkh as $kh) {
+                    extract($kh);
+                    
+                    if ($email == $email1) {
+                        if($mat_khau == $mk){
+                            header("location: index.php?act=logout&&makh=".$ma_kh);
+                        }else{ 
+                            $thongbao = "Sai mật khẩu";
+                        }
+                        break;
+                    }else{
+                        $thongbao = "Email chưa được đăng ký";
+                    }
+                }
             }
+            include "login.php";
             break;
 
         case 'khachhang':

@@ -33,6 +33,7 @@ function khach_hang_select_by_id($ma_kh){
     return pdo_query_one($sql, $ma_kh);
 }
 
+
 function khach_hang_exist($ma_kh){
     $sql = "SELECT count(*) FROM khach_hang WHERE $ma_kh=?";
     return pdo_query_value($sql, $ma_kh) > 0;

@@ -2,6 +2,7 @@
 include "includes/connect.php";
 include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";
+include "includes/dao/khach-hang.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
