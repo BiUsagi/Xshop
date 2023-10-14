@@ -64,7 +64,7 @@
                         <td class="center-checkbox">' . $giam_gia . '</td>
                         <td class="center-checkbox">' . $so_luot_xem . '</td> 
                         <td class="center-checkbox">' . $ngay_nhap . '</td> 
-                        <td >' . $mo_ta . '</td>  
+                        <td class=" small-cell-9">' . $mo_ta . '</td>  
                         <td class=" small-cell-9">' . 'Loại: ' .$ten_loai_2. "<br>" .'Mã: ' .$ma_loai. '</td>
                         <td class="small-cell-9 center-checkbox">
                             <a href="' . $suasp . '"><button class="btn btn-primary">Sửa</button></a>
