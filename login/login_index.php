@@ -13,14 +13,14 @@ if (isset($_GET['act'])) {
             
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
                 $thongbao = '';
-                $email1 = $_POST['email'];
+                $tendn1 = $_POST['madn'];
                 $mk = $_POST['pass']; 
                 $listkh = khach_hang_select_all();
                 
                 foreach ($listkh as $kh) {
                     extract($kh);
-                    if($email1 != '' && $mk != ''){
-                        if ($email == $email1) {
+                    if($tendn1 != '' && $mk != ''){
+                        if ($ma_kh == $tendn1) {
                             if($mat_khau == $mk){
                                 header("location: index.php?act=logout&&makh=".$ma_kh);
                             }else{ 

@@ -11,7 +11,7 @@
 
             <div class="row mb10">
                 Tên Đăng Nhập: <br>
-                <input type="text" name="email" id=""><br>
+                <input type="text" name="madn" id=""><br>
             </div>
             <div class="row mb10">
                 Mật Khẩu
