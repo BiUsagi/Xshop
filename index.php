@@ -1,8 +1,6 @@
-<?php
-include "includes/connect.php";
-include "includes/dao/loai.php";
-include "includes/dao/hang-hoa.php";
-?>
+<?php include "/admin/includes/header.php";?>
+<?php include "/admin/includes/conncect.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,157 +12,56 @@ include "includes/dao/hang-hoa.php";
 </head>
 
 <body>
-    <div class="boxcenter">
-
-        <div class="row mb header ">
-            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
-
-        </div>
-        <div class="row mb menu">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới Thiệu</a></li>
-                <li><a href="#">Liên Hệ</a></li>
-                <li><a href="#">Góp ý</a></li>
-                <li><a href="#">Hỏi Đáp</a></li>
-            </ul>
-        </div>
-
-        <div class="row mb  ">
-            <div class="boxtrai mr demo">
-                <div class="row">
-                    <div class="banner n1">
-                        <img src="images/banner.png" alt>
+    <!-- Navigation -->
+    <?php include "./includes/navigation.php"; ?>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <?php
+                    $query = "SELECT * FROM posts";
+                    $select_all_posts_query = mysqli_query($conn, $query);
+                    
+                    while($row = mysqli_fetch_assoc($select_all_posts_query)){
+                        $post_title = $row['post_title'];
+                        $post_author = $row['post_author'];
+                        $post_date = $row['post_date'];
+                        $post_image = $row['post_image'];
+                        $post_content = $row['post_content'];                      
+                        ?>                     
+                    <h1 class="page-header">
+                        Page Heading 
+                        <small>Secondary Text</small>
+                    </h1>
+                    <!-- First Blog Post -->
+                    <div class="card">
+                        <h2 class="card-title">
+                            <a href="#"><?php echo $post_title; ?></a>
+                        </h2>
+                        <p class="card-text">by <a href="index.php"><?php echo $post_author; ?></a></p>
+                        <p><span class="bi bi-clock"></span> <?php echo $post_date; ?></p>
+                        <hr>
+                        <img class="img-fluid" src="image/<?php echo $post_image; ?>" alt="">
+                        <hr>
+                        <p class="card-text"><?php echo $post_content; ?></p>
+                        <a class="btn btn-primary" href="#">Read More <span class="bi bi-chevron-right"></span></a>
+                        <hr>
                     </div>
-                </div>
-
-                
-
-                <div class="row" id="tenhh">
-
-                    <?php
-
-                    $listhh = hang_hoa_select_all();
-                    foreach ($listhh as $hh) {
-                        extract($hh);
-                        
-
-                        $hinhpath = "admin/sanpham/uploads/" . $hinh;
-                        if (is_file($hinhpath)) {
-                            $img = "<img src='" . $hinhpath . "' height = '50' >";
-                        } else {
-                            $img = "no photo";
-                        }
-
-                        echo '    <div class="boxsp mr"> ';
-                        
-                        echo '    <div class=" row img">'.$img.'</div> ';
-
-                        if ($giam_gia > 0) {
-                            echo '    <div id="sale"></div>';
-                        }else{
-                            echo "";
-                        }
-                        
-
-
-                        echo '    <a href="#"> '.$ten_hh.'</a>';
-
-                        $gia_ban = $don_gia - $giam_gia;
-
-                        echo "    <div class='khung_gia'> ";
-                        echo "    <p class='giahh'> Giá: $gia_ban </p> ";
-
-                        if ($giam_gia > 0) {
-                            $gia_goc = "Giá gốc: " .  $don_gia;
-                        }else{
-                            $gia_goc = "Không giảm giá";
-                        }
-                        echo "    <p class='gia_goc'> $gia_goc </p> ";
-
-                        
-                        echo '    </div> ';
-                        echo '    </div> ';
-                    }
-                    ?>
-
-
-
-
-                    <!-- <div class="boxsp mr">
-                        <div class=" row img"> <img src="images/1.jpg" alt></div>
-                        <p>30$</p>
-                        <a href="#">dong ho </a>
-                    </div> -->
-
-
-
-
-                </div>
-
+                <?php } ?>
             </div>
-
-            <div class="boxphai">
-                <?php include"login/login_index.php" ?>
-                <div class="row mb">
-                    <div class="boxtitle">DANH MUC</div>
-                    <div class="boxcontent2 menudoc">
-                        <ul>
-
-                            <?php
-                            $listdm = loai_select_all();
-                            foreach ($listdm as $dm) {
-                                extract($dm);
-                                echo '<li><a href="">' . $ten_loai . '</a></li>';
-                            }
-                            ?>
-
-                            <!-- <li><a href="">Đồng hồ</a></li>
-                                <li><a href="">Laptop</a></li>
-                                <li><a href="">Điện Thoại</a></li>
-                                <li><a href="">Ba Lô</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="boxfooter searbox">
-                        <form action="#" method="post">
-                            <input type="text" name="" id="">
-                        </form>
-                    </div>
-                </div>
-                <div class="row mb">
-                    <div class="boxtitle">TOP 10 YÊU THÍCH</div>
-                    <div class=" row boxcontent ">
-                        <div class="row mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+            <!-- Blog Sidebar Widgets Column -->
+            <?php include "./includes/sidebar.php"; ?>
         </div>
-        <div class="row mb footer ">
-            Copyright o 2020
-        </div>
-
+        <!-- /.row -->
+        <hr>
     </div>
+    
+    <!-- /.container -->
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <?php include "./includes/footer.php"; ?>
 
 </body>
 
