@@ -2,6 +2,7 @@
     <div class="boxtitle">TÀI KHOẢN</div>
     <div class="boxcontent fomttaikhoan">
 
+
         <form action="index.php?act=login" method="post">
 
             <?php
@@ -22,9 +23,12 @@
             </div>
             <div class="row mb10">
 
-
+            
                 <?php
-                    echo $thongbao; 
+                    if(isset($thongbao)){  
+                        echo '<p style="color: red; margin-top: -5px; margin-bottom: -5px; ">'.$thongbao.'</p>';     
+                    }
+                    
                 ?>
                 <br>
                 <input type="submit" value="Đăng Nhập" name="dangnhap">

@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -9,25 +10,30 @@ if (isset($_GET['act'])) {
             break;
 
         case 'login':
-            $thongbao = '';
+            
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
+                $thongbao = '';
                 $email1 = $_POST['email'];
                 $mk = $_POST['pass']; 
                 $listkh = khach_hang_select_all();
                 
                 foreach ($listkh as $kh) {
                     extract($kh);
-                    
-                    if ($email == $email1) {
-                        if($mat_khau == $mk){
-                            header("location: index.php?act=logout&&makh=".$ma_kh);
-                        }else{ 
-                            $thongbao = "Sai mật khẩu";
+                    if($email1 != '' && $mk != ''){
+                        if ($email == $email1) {
+                            if($mat_khau == $mk){
+                                header("location: index.php?act=logout&&makh=".$ma_kh);
+                            }else{ 
+                                $thongbao = "Sai mật khẩu";
+                            }
+                            break;
+                        }else{
+                            $thongbao = "Email chưa được đăng ký";
                         }
-                        break;
-                    }else{
-                        $thongbao = "Email chưa được đăng ký";
-                    }
+                    }else $thongbao = "Vui lòng nhập đầy đủ thông tin";
+
+
+                    
                 }
             }
             include "login.php";
