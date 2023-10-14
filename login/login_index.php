@@ -1,5 +1,6 @@
 <?php
 
+
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -9,6 +10,9 @@ if (isset($_GET['act'])) {
 
         case 'login':
             include "login.php";
+            if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
+                
+            }
             break;
 
         case 'khachhang':

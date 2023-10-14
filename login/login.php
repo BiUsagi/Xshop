@@ -26,13 +26,14 @@
 
 
 
-                <input type="submit" value="Đăng Nhập" id="">
-                <?php echo '<a href="' . $logout . '">logout</a>' ?>
+                <input type="submit" value="Đăng Nhập" name="dangnhap">
+                
             </div>
 
         </form>
-        <!-- <li><a href="#">Quên mật khẩu</a></li>
-            <li><a href="<?php $logout ?>">Đăng ký thành viên</a></li> -->
+        <li><a href="#">Quên mật khẩu</a></li>
+        <li><?php echo '<a href="' . $logout . '">Đăng ký thành viên</a>' ?></li>
+        
     </div>
 
 </div>
