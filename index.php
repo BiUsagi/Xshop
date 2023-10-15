@@ -67,7 +67,7 @@ include "includes/dao/khach-hang.php"
                             echo '    <div id="sale"></div>';
                         }else{
                             echo "";
-                        }
+                        } 
 
                         echo '    <a href="#"> '.$ten_hh.'</a>';
 
