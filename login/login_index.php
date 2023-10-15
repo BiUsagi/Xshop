@@ -59,6 +59,10 @@ if (isset($_GET['act'])) {
             include "thongtin.php";
             break;
 
+        case 'res':
+            include "res.php";
+            break;
+
         default:
             include "includes/login.php";
             break;

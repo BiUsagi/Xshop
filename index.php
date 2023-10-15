@@ -133,11 +133,11 @@ include "includes/dao/khach-hang.php"
                                 <li><a href="">Ba Lô</a></li> -->
                         </ul>
                     </div>
-                    <div class="boxfooter searbox">
+                    <!-- <div class="boxfooter searbox">
                         <form action="#" method="post">
                             <input type="text" name="" id="">
                         </form>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row mb">
                     <div class="boxtitle">TOP 10 YÊU THÍCH</div>

@@ -35,8 +35,8 @@
         <div class="phai">
             <div class="tenkh"> <?php echo $ho_ten ?> </div>
             <?php 
-                if($vai_tro == 1) $qtv = "Trạng thái: admin";
-                else $qtv = "Trang thái: User";
+                if($vai_tro == 1) $qtv = "Chức vụ: ADMIN";
+                else $qtv = "Chức vụ: USER";
             ?>
             <div class="cv"><?php echo $qtv ?></div>
             <a href="<?php echo $tt ?>"><button type="submit" class="kh">Thông tin tài khoản</button></a>

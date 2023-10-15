@@ -134,10 +134,11 @@
 
 .banner {
     min-height: 300px;
-    width: 97.5%;
+    width: 99%;
     background-color: #ffffff;
     text-align: center;
     margin-bottom: 10px;
+    margin-left: 2px;
 }
 
 .banner img {
