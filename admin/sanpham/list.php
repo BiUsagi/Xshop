@@ -20,7 +20,7 @@
                 <th class="vertical-center"> TÊN SẢN PHẨM </th>
                 <th class="vertical-center"> HÌNH </th>
                 <th class="vertical-center"> GIÁ </th>
-                <th class="vertical-center"> GIẢM GIÁ(%) </th>
+                <th class="vertical-center"> GIẢM GIÁ </th>
                 <th class="vertical-center"> LƯỢT XEM </th>
                 <th class="vertical-center"> NGÀY NHẬP</th>
                 <th class="vertical-center"> MÔ TẢ</th>
@@ -61,7 +61,7 @@
                         <td class=" small-cell-9">' . $ten_hh . '</td> 
                         <td class="center-checkbox small-cell-9">' . $img . '</td> 
                         <td class="center-checkbox">' . $don_gia . '</td>
-                        <td class="center-checkbox">' . $giam_gia . '</td>
+                        <td class="center-checkbox">' . $giam_gia . '   % </td>
                         <td class="center-checkbox">' . $so_luot_xem . '</td> 
                         <td class="center-checkbox">' . $ngay_nhap . '</td> 
                         <td class=" small-cell-9">' . $mo_ta . '</td>  

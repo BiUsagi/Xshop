@@ -73,7 +73,7 @@ include "includes/dao/khach-hang.php"
 
                         echo '    <a href="#"> '.$ten_hh.'</a>';
 
-                        $gia_ban = $don_gia - $giam_gia;
+                        $gia_ban = $don_gia /100 * (100-$giam_gia);
 
                         echo "    <div class='khung_gia'> ";
                         echo "    <p class='giahh'> Giá: $gia_ban </p> ";

@@ -17,7 +17,7 @@
                 <th> MÃ KH </th>
                 <th>Họ Tên </th>
                 <th>Mật Khẩu </th>
-                <th>Kich Hoat </th>
+                <th>Trạng thái </th>
                 <th>Hinh </th>
                 <th>Email </th>
                 <th>Vai Trò </th>
@@ -28,17 +28,32 @@
             $listkh = khach_hang_select_all();
             foreach ($listkh as $khachhang) {
                 extract($khachhang);
+
+                $hinhpath = "../admin/khachhang/uploads/" . $hinh;
+                if (is_file($hinhpath)) {
+                    $img = "<img src='". $hinhpath."' style='width: 100%;'>";
+                } else {
+                    $img = "no photo";
+                }
+
                 $suakh = "index.php?act=khachhang&khachhang=sua&maloai=" . $ma_kh;
                 $xoakh = "index.php?act=khachhang&khachhanh=xoa&maloai=" . $ma_kh;
+
+                if($vai_tro == 1) $qtv = "Admin";
+                else $qtv = "User";
+
+                if($kich_hoat == 1) $block = "Chặn";
+                else $block = "Mở";
+
                 echo '<tr>
                     <td><input type="checkbox" name=" id=""></td>
                     <td>' . $ma_kh . '</td>
                     <td>' . $ho_ten . '</td> 
                     <td>' . $mat_khau . '</td> 
-                    <td>' . $kich_hoat . '</td> 
-                    <td>' . $hinh . '</td> 
+                    <td>' . $block . '</td> 
+                    <td style="width: 120px;">' . $img . '</td> 
                     <td>' . $email . '</td> 
-                    <td>' . $vai_tro . '</td> 
+                    <td>' . $qtv . '</td> 
                     <td>
                         <a href="' . $suakh . '"><button class="btn btn-primary">Sửa</button></a>
                         <a href="' . $xoakh .'"><button class="btn btn-danger">Xóa</button></a>
