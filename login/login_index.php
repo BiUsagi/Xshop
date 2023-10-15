@@ -10,10 +10,20 @@ if (isset($_GET['act'])) {
             include "logout.php";
             break;
 
+           
+        case 'xoass':
+                session_start();
+                session_destroy();
+                header("location: index.php?act=login");
+                break;
+
         case 'login':
-            
+          
+            // echo $_SESSION['user'];
+
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
                 $thongbao = '';
+
                 $tendn1 = $_POST['madn'];
                 $mk = $_POST['pass']; 
                 $listkh = khach_hang_select_all();
@@ -22,6 +32,8 @@ if (isset($_GET['act'])) {
                     if($tendn1 != '' && $mk != ''){
                         if ($ma_kh == $tendn1) {
                             if($mat_khau == $mk){
+                                session_start();
+                                $_SESSION["user"] = $ma_kh;
                                 header("location: index.php?act=logout&&makh=".$ma_kh);
                             }else{ 
                                 $thongbao = "Sai mật khẩu";
