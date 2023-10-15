@@ -1,9 +1,10 @@
 <?php
     $dx = "index.php?act=xoass";
-    session_start();
+    // session_start();
     // echo $_SESSION["user"];
     if(!isset($_SESSION["user"])) 
-    header("location: index.php?act=login");
+    echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
+    // header("location: index.php?act=login");
     
 ?>
 

@@ -12,12 +12,13 @@ if (isset($_GET['act'])) {
 
            
         case 'xoass':
-                session_start();
                 session_destroy();
-                header("location: index.php?act=login");
+                echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
+                // header("location: index.php?act=login");
                 break;
 
         case 'login':
+
           
             // echo $_SESSION['user'];
 
@@ -32,9 +33,12 @@ if (isset($_GET['act'])) {
                     if($tendn1 != '' && $mk != ''){
                         if ($ma_kh == $tendn1) {
                             if($mat_khau == $mk){
-                                session_start();
+                                // $ma_kh = $_SESSION["user"] ;
                                 $_SESSION["user"] = $ma_kh;
-                                header("location: index.php?act=logout&&makh=".$ma_kh);
+                                // echo $ma_kh;
+                                // header("location: index.php?act=logout&makh= $ma_kh");
+                                echo '<meta http-equiv="refresh" content="0; url=index.php?makh='.$ma_kh.'&act=logout" >';
+    
                             }else{ 
                                 $thongbao = "Sai mật khẩu";
                             }

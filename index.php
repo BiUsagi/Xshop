@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "includes/connect.php";
 include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";
@@ -113,7 +114,11 @@ include "includes/dao/khach-hang.php"
             </div>
 
             <div class="boxphai">
+
+            
                 <?php include"login/login_index.php" ?>  
+
+
                 <div class="row mb">
                     <div class="boxtitle">DANH MỤC</div>
                     <div class="boxcontent2 menudoc">
