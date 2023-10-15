@@ -13,6 +13,10 @@ include "includes/dao/khach-hang.php"
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="login/logout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
 </head>
 
 
@@ -43,18 +47,19 @@ include "includes/dao/khach-hang.php"
 
                 
 
-                <div class="row" id="tenhh">
+                <div class="row container" id="tenhh">
 
                     <?php
 
                     $listhh = hang_hoa_select_all();
                     foreach ($listhh as $hh) {
                         extract($hh);
+                        echo '<div class="flexsp">';
                         
 
                         $hinhpath = "admin/sanpham/uploads/" . $hinh;
                         if (is_file($hinhpath)) {
-                            $img = "<img src='" . $hinhpath .   "' style='width: 100%; height: 50; object-fit: cover;' alt='Mô tả ảnh'>";
+                            $img = "<img src='" . $hinhpath .   "'>";
                         } else {
                             $img = "no photo";
                         }
@@ -84,7 +89,8 @@ include "includes/dao/khach-hang.php"
                         }
 
                        
-
+                        echo '    </div> ';
+                        echo ' <div> <a href="# "class="cart-button"><i class="fa-solid fa-cart-plus fa-2xl "></i></a>  </div>';
                         echo '    </div> ';
                         echo '    </div> ';
                     }
