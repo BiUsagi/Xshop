@@ -45,7 +45,8 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
         // Thực hiện truy vấn SQL để chèn dữ liệu
         $sql = khach_hang_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro);
         $thongbao = "Đăng ký thành công!";
-      
+        echo '<script>window.location.href = "./index.php?act=login";</script>';
+        exit; // Kết thúc việc thực hiện mã PHP
     }
 
 
