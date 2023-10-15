@@ -12,7 +12,7 @@
         <?php
 
             extract(khach_hang_select_by_id($_GET['makh']));
-            $hinhpath = "./admin/sanpham/uploads/" . $hinh;
+            $hinhpath = "./admin/khachhang/uploads/" . $hinh;
                 if (is_file($hinhpath)) {
                     $img = "<img src='" . $hinhpath . "' height = '50' >";
                 } else {
