@@ -68,8 +68,6 @@ include "includes/dao/khach-hang.php"
                         }else{
                             echo "";
                         }
-                        
-
 
                         echo '    <a href="#"> '.$ten_hh.'</a>';
 
@@ -80,12 +78,13 @@ include "includes/dao/khach-hang.php"
 
                         if ($giam_gia > 0) {
                             $gia_goc = "Giá gốc: " .  $don_gia;
+                            echo "<p class='gia_goc'> $gia_goc </p> ";
                         }else{
-                            $gia_goc = "Không giảm giá";
+                            echo "<p class='gia_goc'> Không giảm giá </p> ";
                         }
-                        echo "    <p class='gia_goc'> $gia_goc </p> ";
 
-                        
+                       
+
                         echo '    </div> ';
                         echo '    </div> ';
                     }

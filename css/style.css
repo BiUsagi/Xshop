@@ -291,8 +291,6 @@ border: 1px #999 solid;
 body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-
 #tenhh a{
     margin-left: 10px;
     text-decoration: none;
@@ -300,6 +298,9 @@ body{
     font-size: 13px;
 }
 .khung_gia{
+    display: flex;
+    flex-direction: column; /* Hiển thị các phần tử con theo chiều dọc */
+    align-items: center;;
     margin-left: 10px;
     position: absolute;
     font-weight: bolder;
@@ -308,11 +309,13 @@ body{
 }
 .gia_goc{
     text-decoration: line-through;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: -110px;
     color: #666;
 }
+
+
 #sale{
     width: 60px;
     height: 40px;

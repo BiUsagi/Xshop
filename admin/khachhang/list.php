@@ -14,14 +14,14 @@
         <table class="table table-bordered  colortable">
             <tr>
                 <th></th>
-                <th> MÃ KH </th>
-                <th>Họ Tên </th>
-                <th>Mật Khẩu </th>
-                <th>Trạng thái </th>
-                <th>Hinh </th>
-                <th>Email </th>
-                <th>Vai Trò </th>
-                <th>Hành Động</th>
+                <th class="vertical-center"> MÃ KH </th>
+                <th class="vertical-center">Họ Tên </th>
+                <th class="vertical-center">Mật Khẩu </th>
+                <th class="vertical-center">Trạng thái </th>
+                <th class="vertical-center">Hinh </th>
+                <th class="vertical-center">Email </th>
+                <th class="vertical-center">Vai Trò </th>
+                <th class="vertical-center">Hành Động</th>
             </tr>
             <?php
             //in dskh
@@ -46,15 +46,17 @@
                 else $block = "Mở";
 
                 echo '<tr>
-                    <td><input type="checkbox" name=" id=""></td>
-                    <td>' . $ma_kh . '</td>
+                    <td class="center-checkbox small-cell-4">
+                        <input  class="large-checkbox" type="checkbox" name=" id="">
+                    </td>
+                    <td class="center-checkbox"> ' . $ma_kh . '</td>
                     <td>' . $ho_ten . '</td> 
                     <td>' . $mat_khau . '</td> 
-                    <td>' . $block . '</td> 
-                    <td style="width: 120px;">' . $img . '</td> 
+                    <td class="center-checkbox">' . $block . '</td> 
+                    <td  class="center-checkbox small-cell-9">' . $img . '</td> 
                     <td>' . $email . '</td> 
-                    <td>' . $qtv . '</td> 
-                    <td>
+                    <td class="center-checkbox">' . $qtv . '</td> 
+                    <td class="small-cell-9 center-checkbox">
                         <a href="' . $suakh . '"><button class="btn btn-primary">Sửa</button></a>
                         <a href="' . $xoakh .'"><button class="btn btn-danger">Xóa</button></a>
                     </td>
