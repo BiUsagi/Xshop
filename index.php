@@ -30,7 +30,7 @@ include "includes/dao/khach-hang.php"
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a href="#">Trang chủ</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
                 <li><a href="#">Liên Hệ</a></li>
                 <li><a href="#">Góp ý</a></li>
