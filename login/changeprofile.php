@@ -4,11 +4,11 @@
 
     $ma_kh = $_SESSION['user'];
 
+    $listkh = khach_hang_select_all();
+    extract($listkh);
     
     // Khởi tạo các biến lưu trữ dữ liệu đã nhập
-    $ma_kh_input = '';
-    $ho_ten_input = '';
-    $email_input = '';
+
          
 
 
@@ -57,15 +57,15 @@
 
             <div class="row mb10">
                 Tên Đăng Nhập <br>
-                <input type="text" name="ma_kh" id="" value="<?php echo $ma_kh_input; ?>"><br>
+                <input type="text" name="ma_kh" id="" value="<?php echo $ma_kh; ?>"><br>
             </div>
             <div class="row mb10">
                 Họ và tên <br>
-                <input type="text" name="ho_ten" id="" value="<?php echo $ho_ten_input; ?>"><br>
+                <input type="text" name="ho_ten" id="" value="<?php echo $ho_ten; ?>"><br>
             </div>
             <div class="row mb10">
                 Email<br>
-                <input type="text" name="email" id="" value="<?php echo $email_input; ?>"><br>
+                <input type="text" name="email" id="" value="<?php echo $email; ?>"><br>
             </div>
             <div class="mb-3">
                 <label for="hinh" class="form-label">Hình ảnh</label><br>
