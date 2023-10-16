@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION["user"])){ 
+    // header( "location: ../index.php?act=login");
+    echo '<script>window.location.href = "../index.php?act=login";</script>';
+}
+// echo $_SESSION["user"];
 include "dao/pdo.php";
 include "includes/connect.php";
 ?>

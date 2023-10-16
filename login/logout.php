@@ -1,5 +1,6 @@
 <?php
     $dx = "index.php?act=xoass";
+    
     // session_start();
     // echo $_SESSION["user"];
     if(!isset($_SESSION["user"])) 
@@ -19,6 +20,7 @@
     <div class="container">
         <?php
             extract(khach_hang_select_by_id($_GET['makh']));
+            $test1 = ($_GET['makh']);
 
             $hinhpath = "./admin/sanpham/uploads/" . $hinh;
             if (is_file($hinhpath)) {
@@ -42,6 +44,11 @@
             ?>
             <div class="cv"><?php echo $qtv ?></div>
             <a href="<?php echo $tt ?>"><button type="submit" class="kh">Thông tin tài khoản</button></a>
+
+            <?php
+                $ad = "./admin/index.php?makh=". $test1;
+                if($vai_tro == 1) echo '<a href=" '.$ad.' "><button type="submit" class="kh">Trang Admin</button></a>'
+            ?>
             
         </div>
 
@@ -52,6 +59,7 @@
             <li><a href="#">Thay đổi thông tin</a></li>
             <li><a href="#">Đổi mật khẩu</a></li>
             <li><a href="<?php echo $dx ?>">Đăng xuất</a></li>
+
         </div>
         
     </div>
