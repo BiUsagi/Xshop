@@ -4,11 +4,23 @@
 
     $ma_kh = $_SESSION['user'];
 
+    // Truy vấn cơ sở dữ liệu để lấy thông tin của khách hàng
+    $sql = "SELECT * FROM khach_hang WHERE ma_kh = '$ma_kh'";
+    $result = $conn->query($sql);
     
-    // Khởi tạo các biến lưu trữ dữ liệu đã nhập
-    $ma_kh_input = '';
-    $ho_ten_input = '';
-    $email_input = '';
+    if ($result->num_rows > 0) {
+        // Lấy thông tin khách hàng từ kết quả truy vấn
+        $row = $result->fetch_assoc();
+        $ho_ten = $row['ho_ten'];
+        $email = $row['email'];
+    }
+    
+    // Các biến lưu trữ dữ liệu đã nhập
+    $ma_kh_input = $ma_kh;
+    $ho_ten_input = $ho_ten;
+    $email_input = $email;
+    
+
          
 
 
@@ -57,15 +69,15 @@
 
             <div class="row mb10">
                 Tên Đăng Nhập <br>
-                <input type="text" name="ma_kh" id="" value="<?php echo $ma_kh_input; ?>"><br>
+                <input type="text" name="ma_kh" id="" value="<?php echo $ma_kh; ?>"><br>
             </div>
             <div class="row mb10">
                 Họ và tên <br>
-                <input type="text" name="ho_ten" id="" value="<?php echo $ho_ten_input; ?>"><br>
+                <input type="text" name="ho_ten" id="" value="<?php echo $ho_ten; ?>"><br>
             </div>
             <div class="row mb10">
                 Email<br>
-                <input type="text" name="email" id="" value="<?php echo $email_input; ?>"><br>
+                <input type="text" name="email" id="" value="<?php echo $email; ?>"><br>
             </div>
             <div class="mb-3">
                 <label for="hinh" class="form-label">Hình ảnh</label><br>
