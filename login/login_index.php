@@ -35,8 +35,9 @@ if (isset($_GET['act'])) {
                                 // $ma_kh = $_SESSION["user"] ;
                                 $_SESSION["user"] = $ma_kh;
                                 // echo $ma_kh;
-                                header("location: index.php?act=logout&makh= $ma_kh");
-                                echo '<meta http-equiv="refresh" content="0; url=index.php?makh='.$ma_kh.'&act=logout" >';
+                                echo '<script>window.location.href = "./index.php?act=logout&makh='.$ma_kh.'";</script>';
+                                // header("location: index.php?act=logout&makh=$ma_kh");
+                                // echo '<meta http-equiv="refresh" content="0; url=index.php?makh='.$ma_kh.'&act=logout" >';
     
                             }else{ 
                                 $thongbao = "Sai mật khẩu";

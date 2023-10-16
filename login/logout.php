@@ -3,7 +3,8 @@
     // session_start();
     // echo $_SESSION["user"];
     if(!isset($_SESSION["user"])) 
-    echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
+    echo '<script>window.location.href = "./index.php?act=login";</script>';
+    // echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
     // header("location: index.php?act=login");
     
 ?>
