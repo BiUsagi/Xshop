@@ -22,7 +22,7 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
     $checkpass = $_POST['checkpass'];
 
     //sử dụng hình ảnh mặc định
-    $hinh = "user_img.png";
+    $hinh = "";
     $kich_hoat = 0;
     $vai_tro = 0;
 

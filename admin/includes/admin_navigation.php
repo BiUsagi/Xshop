@@ -1,3 +1,8 @@
+<?php
+    // session_start();
+    $makh = $_SESSION['user'];
+    $link = "../index.php?act=logout&makh=".$makh;
+?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -7,11 +12,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand colortwo" href="./index.php">XSHOP ADMIN</a>
+        <!-- Chuyển trang -->
+        <a class="navbar-brand colortwo" href="<?php echo $link ?>">XSHOP ADMIN</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
-        <li><a href="../index.php">XSHOP</a></li>
+        <li><a href="<?php echo $link ?>">XSHOP</a></li>
 
 
         <li class="dropdown">

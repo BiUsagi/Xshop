@@ -67,8 +67,12 @@ if (isset($_GET['act'])) {
             include "res.php";
             break;
 
+        case 'setpw':   
+            include "setpw.php";
+            break;
+
         default:
-            include "includes/login.php";
+            include "login.php";
             break;
     }
 } else {

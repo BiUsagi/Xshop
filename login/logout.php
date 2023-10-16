@@ -1,5 +1,6 @@
 <?php
     $dx = "index.php?act=xoass";
+    $setpw = "index.php?act=setpw";
     
     // session_start();
     // echo $_SESSION["user"];
@@ -47,7 +48,10 @@
 
             <?php
                 $ad = "./admin/index.php?makh=". $test1;
-                if($vai_tro == 1) echo '<a href=" '.$ad.' "><button type="submit" class="kh">Trang Admin</button></a>'
+                
+                if($vai_tro == 1) echo '<a href=" '.$ad.' "><button type="submit" class="kh">Trang Admin</button></a>';
+
+                
             ?>
             
         </div>
@@ -57,7 +61,7 @@
         <div class="duoi">
             <li><a href="#">Giỏ hàng</a></li>
             <li><a href="#">Thay đổi thông tin</a></li>
-            <li><a href="#">Đổi mật khẩu</a></li>
+            <li><a href="<?php echo $setpw ?>">Đổi mật khẩu</a></li>
             <li><a href="<?php echo $dx ?>">Đăng xuất</a></li>
 
         </div>

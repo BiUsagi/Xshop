@@ -25,13 +25,13 @@
             
             
             echo "<div class='tronlg'> .$img. </div>"; 
-            echo "<br>";
+            // echo "<br>";
             echo "<b>Mã đăng nhập:</b> $ma_kh<br>";
             echo "<b>Họ và tên :</b> $ho_ten<br>";
             echo "<b>Email :</b> $email<br>";
             echo "<b>Chức vụ :</b> $qtv <br>";
 
-            echo '<button><a href="'.$back.'">Quay lại</a></button>';
+            echo '<button style="width:100%" name="back"><a href="'.$back.'" style="text-decoration: none; padding: 3px 65px" >Quay lại</a></button>';
         ?>
         
 

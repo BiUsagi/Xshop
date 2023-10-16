@@ -12,6 +12,11 @@ function khach_hang_update($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat
     pdo_execute($sql, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat==1, $vai_tro==1, $ma_kh);
 }
 
+function khach_hang_update_mat_khau_by_id($ma_kh, $mat_khau){
+    $sql = "UPDATE khach_hang SET mat_khau=? WHERE ma_kh=?";
+    pdo_execute($sql, $ma_kh, $mat_khau);
+}
+
 function khach_hang_delete($ma_kh){
     $sql = "DELETE FROM khach_hang  WHERE ma_kh=?";
     if(is_array($ma_kh)){
