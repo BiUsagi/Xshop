@@ -4,10 +4,22 @@
 
     $ma_kh = $_SESSION['user'];
 
-    $listkh = khach_hang_select_all();
-    extract($listkh);
+    // Truy vấn cơ sở dữ liệu để lấy thông tin của khách hàng
+    $sql = "SELECT * FROM khach_hang WHERE ma_kh = '$ma_kh'";
+    $result = $conn->query($sql);
     
-    // Khởi tạo các biến lưu trữ dữ liệu đã nhập
+    if ($result->num_rows > 0) {
+        // Lấy thông tin khách hàng từ kết quả truy vấn
+        $row = $result->fetch_assoc();
+        $ho_ten = $row['ho_ten'];
+        $email = $row['email'];
+    }
+    
+    // Các biến lưu trữ dữ liệu đã nhập
+    $ma_kh_input = $ma_kh;
+    $ho_ten_input = $ho_ten;
+    $email_input = $email;
+    
 
          
 
