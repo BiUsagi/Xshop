@@ -47,15 +47,15 @@
         <form action="index.php?act=setpw" method="post">
             <label class="ipmk">
                 Mật khẩu cũ <br>
-                <input type="text" name="mkc" id=""><br>
+                <input type="text" name="mkc" id="" required><br>
             </label>
             <label class="ipmk">
                 Mật khẩu mới <br>
-                <input type="text" name="mkm1" id=""><br>
+                <input type="text" name="mkm1" id="" required><br>
             </label>
             <label class="ipmk">
                 Nhập lại mật khẩu <br>
-                <input type="text" name="mkm2" id=""><br>
+                <input type="text" name="mkm2" id="" required><br>
             </label>
             
             <!-- <br> -->
