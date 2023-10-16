@@ -1,6 +1,7 @@
 <?php
     $dx = "index.php?act=xoass";
     $setpw = "index.php?act=setpw";
+    $changepf = "index.php?act=changepf";
     
     // session_start();
     // echo $_SESSION["user"];
@@ -8,7 +9,9 @@
     echo '<script>window.location.href = "./index.php?act=login";</script>';
     // echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
     // header("location: index.php?act=login");
-    
+
+
+   
 ?>
 
 
@@ -60,7 +63,7 @@
 
         <div class="duoi">
             <li><a href="#">Giỏ hàng</a></li>
-            <li><a href="#">Thay đổi thông tin</a></li>
+            <li><a href="<?php echo $changepf ?>">Thay đổi thông tin</a></li>
             <li><a href="<?php echo $setpw ?>">Đổi mật khẩu</a></li>
             <li><a href="<?php echo $dx ?>">Đăng xuất</a></li>
 

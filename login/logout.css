@@ -7,6 +7,14 @@
 .container{
     position: relative;
 }
+
+.kichthuoc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
 .trai{
     position: absolute;
     width: 40%;
