@@ -24,7 +24,12 @@
     flex-direction: column;
     border-radius: 5px;
     width: 31.2%;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;        
+    /* margin-right: 10px; */
+}
+
+.trong{
+    width: 21px;
 }
 
 .boxsp img {
@@ -159,7 +164,8 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* background-color: #0056b3; */
 }
 
 .menu{
@@ -464,6 +470,7 @@ body {
 
 .boxsp {
     position: relative;
+    /* margin-left: 15px; */
 }
 
 iframe {

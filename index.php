@@ -40,7 +40,7 @@ include "includes/dao/khach-hang.php"
 
                     
                     <form action="webuser/san_pham_index.php?prd=xuly" method="post" enctype="multipart/form-data">
-                        <input type="text" name="ten"> 
+                        <input type="text" name="tensp"> 
                         <input type="submit" name="tim" value="Tìm kiếm">
                     </form>
                     

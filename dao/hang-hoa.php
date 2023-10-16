@@ -28,6 +28,11 @@ function hang_hoa_select_all(){
     return pdo_query($sql);
 }
 
+function hang_hoa_select_by_ten($ten_hh){
+    $sql = "SELECT * FROM hang_hoa WHERE ten_hh LIKE '$ten_hh'.%";
+    return pdo_query($sql);
+}
+
 function hang_hoa_select_by_id($ma_hh){
     $sql = "SELECT * FROM hang_hoa WHERE ma_hh=?";
     return pdo_query_one($sql, $ma_hh);

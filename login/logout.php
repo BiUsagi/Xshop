@@ -26,7 +26,7 @@
             extract(khach_hang_select_by_id($_GET['makh']));
             $test1 = ($_GET['makh']);
 
-            $hinhpath = "./admin/sanpham/uploads/" . $hinh;
+            $hinhpath = "./admin/khachhang/uploads/" . $hinh;
             if (is_file($hinhpath)) {
                 $img =  '<img src="'. $hinhpath .'" alt="" width="100%" height="100%" class="imgkhlogout">';
             } else {

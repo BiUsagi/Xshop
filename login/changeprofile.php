@@ -27,7 +27,7 @@
         move_uploaded_file($hinh_tmp, $upload_dir . $hinh);
 
         //kiểm tra dữ liệu đầu vào
-    if (strlen($ma_kh) < 6 || strlen($ma_kh) > 20) {
+    if (strlen($makh) < 6 || strlen($makh) > 20) {
         $thongbao = "Tên đăng nhập phải có từ 6 đến 20 ký tự.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $thongbao = "Email không hợp lệ.";

@@ -8,17 +8,16 @@ if (isset($_GET['prd'])) {
             break;
 
         case 'xuly':
-            if (isset($_POST['tim']) && ($_POST['tim']))
-            echo '<script>window.location.href = "../index.php?prd=timkiem";</script>';
+            if (isset($_POST['tim']) && ($_POST['tim'])){
+            echo '<script>window.location.href = "../index.php?prd=timkiem&tim='.$_POST['tensp'].'";</script>';
+            // $tim = $_POST['tim'];
+            }
             break;    
 
         case 'timkiem':
-            if (isset($_POST['tim']) && ($_POST['tim'])){
-                
-            }
-
-            
-            include "webuser/listtk.php";
+            $tim = $_GET['tim'];
+          
+            include "webuser/listtk.php" ;
             break;
 
         case 'setpw':

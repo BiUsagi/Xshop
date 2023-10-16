@@ -11,8 +11,10 @@
     <?php
 
     $listhh = hang_hoa_select_all();
+    $i = 0;
     foreach ($listhh as $hh) {
         extract($hh);
+        $i++;
         echo '<div class="flexsp">';
 
 
@@ -52,6 +54,12 @@
         echo ' <div> <a href="# "class="cart-button"><i class="fa-solid fa-cart-plus fa-2xl "></i></a>  </div>';
         echo '    </div> ';
         echo '    </div> ';
+        
+        if($i==3) $i=0;
+        if($i==1 || $i==2){
+                echo '    <div class="trong"> ';
+                echo '    </div> ';
+        }
     }
     ?>
 
