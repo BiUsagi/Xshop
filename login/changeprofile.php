@@ -1,10 +1,10 @@
 <?php
-
     if(!isset($_SESSION["user"])) 
     echo '<script>window.location.href = "./index.php?act=login";</script>';
 
-    $makh = khach_hang_select_by_id($_SESSION["user"]);
-    extract($makh);
+    $ma_kh = $_SESSION['user'];
+
+    
     // Khởi tạo các biến lưu trữ dữ liệu đã nhập
     $ma_kh_input = '';
     $ho_ten_input = '';
@@ -14,7 +14,7 @@
 
     if (isset($_POST['capnhat'])) {
         // Lấy dữ liệu từ biểu mẫu
-        $ma_kh = $_POST['ma_kh'];
+        $makh = $_POST['ma_kh'];
         $ho_ten = $_POST['ho_ten'];
         $email = $_POST['email'];
 
@@ -25,15 +25,22 @@
         // Lưu hình ảnh vào thư mục hoặc cơ sở dữ liệu tùy chọn
         $upload_dir = "./admin/khachhang/uploads/";
         move_uploaded_file($hinh_tmp, $upload_dir . $hinh);
-    
+
+        //kiểm tra dữ liệu đầu vào
+    if (strlen($ma_kh) < 6 || strlen($ma_kh) > 20) {
+        $thongbao = "Tên đăng nhập phải có từ 6 đến 20 ký tự.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $thongbao = "Email không hợp lệ.";
+    } else {
         // Truy vấn SQL để cập nhật thông tin, bao gồm cả tên hình ảnh
-        $sql = "UPDATE khach_hang SET ho_ten = '$ho_ten', email = '$email', hinh = '$hinh' WHERE ma_kh = '$makh'";
+        $sql = "UPDATE khach_hang SET ma_kh = '$makh', ho_ten = '$ho_ten', email = '$email', hinh = '$hinh' WHERE ma_kh = '$ma_kh'";
         if ($conn->query($sql) === TRUE) {
             $thongbao = "Cập nhật thông tin thành công!";
         } else {
             $thongbao = "Lỗi: " . $sql . "<br>" . $conn->error;
         }
     }
+}
 
 ?>
 
