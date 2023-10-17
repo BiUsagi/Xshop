@@ -12,6 +12,9 @@ if (isset($_GET['prd'])) {
             if (isset($_POST['tim']) && ($_POST['tim'])){
             echo '<script>window.location.href = "../index.php?prd=timkiem&tim='.$_POST['tensp'].'";</script>';
             // $tim = $_POST['tim'];
+            $_SESSION['prd'] = $_GET['prd'];
+            include "webuser/home.php";
+            break;
             }
             break;    
 

@@ -56,7 +56,10 @@ if (isset($_GET['act'])) {
 
                 }
             }
-            include "login.php";
+            // include "login.php";
+            if(isset($_SESSION['user'])){
+                include "login/logout.php?makh=".$_SESSION['user'];
+            }else include "login/login.php";
             break;
 
         case 'logouttt':
@@ -91,7 +94,9 @@ if (isset($_GET['act'])) {
     }
 } else {
     $_SESSION['act'] = 'login';
-    include "login/login.php";
+    if(isset($_SESSION['user'])){
+        include "login/logout.php";
+    }else include "login/login.php";
 }
 
 

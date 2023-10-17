@@ -11,7 +11,7 @@
     // header("location: index.php?act=login");
 
 
-   
+//    echo $_SESSION['user'];
 ?>
 
 
@@ -23,7 +23,7 @@
 
     <div class="container">
         <?php
-            extract(khach_hang_select_by_id($_GET['makh']));
+            extract(khach_hang_select_by_id($_SESSION['user']));
             $test1 = ($_SESSION['user']);
 
             $hinhpath = "./admin/khachhang/uploads/" . $hinh;

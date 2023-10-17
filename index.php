@@ -57,7 +57,7 @@ include "includes/dao/khach-hang.php"
                 <?php
                     
                     include "webuser/san_pham_index.php";
-                    echo $_SESSION['prd'];
+                    // echo $_SESSION['prd'];
                 ?>
 
             </div>
@@ -65,8 +65,18 @@ include "includes/dao/khach-hang.php"
             <div class="boxphai">
 
                 
-                <?php include"login/login_index.php" ?>  
-                <?php echo $_SESSION['act']; ?>
+                 
+                <?php 
+                include "login/login_index.php" ;
+                //  if(!isset($_SESSION["user"])){
+                //     include "login/login_index.php?";
+                //  }
+                //  else{ 
+                //     echo $_SESSION["user"];
+                //     include "login/login_index.php?act=logout?makh=".$_SESSION["user"];
+                //  }
+                // echo $_SESSION['act']; 
+                ?>
 
                 <div class="row mb">
                     <div class="boxtitle">DANH MỤC</div>
