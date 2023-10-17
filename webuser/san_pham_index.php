@@ -25,7 +25,7 @@ if (isset($_GET['prd'])) {
             include "webuser/listtk.php" ;
             break;
 
-        case 'setpw':
+        case 'chitietsp':
             include "setpw.php";
             break;
 

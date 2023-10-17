@@ -7,7 +7,8 @@ if (isset($_GET['act'])) {
         case 'logout':
             
             $_SESSION['act'] = $_GET['act'];
-            $tt = "index.php?act=ttkh&&makh=".($_GET['makh'])."&prd=".($_SESSION['prd']);
+            // echo $_SESSION['user'];
+            // $tt = "index.php?act=ttkh&&makh=".($_SESSION['user'])."&prd=".($_SESSION['prd']);
             include "logout.php";
             break;
 

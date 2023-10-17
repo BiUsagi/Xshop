@@ -1,6 +1,7 @@
 <?php
     if(!isset($_SESSION["user"])) 
     echo '<script>window.location.href = "./index.php?act=login";</script>';
+    $back = "index.php?act=logout&&makh=".$_SESSION['user'];
 
     $thongbao ='';
     $listtt = khach_hang_select_by_id($_SESSION["user"]);
@@ -64,6 +65,10 @@
 
 
         </form>
+
+        <li>
+            <?php echo '<a href="' . $back . '">Trở về</a>' ?>
+        </li>
         
         
     </div>

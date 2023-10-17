@@ -2,6 +2,9 @@
     $dx = "index.php?act=xoass";
     $setpw = "index.php?act=setpw";
     $changepf = "index.php?act=changepf";
+
+    $tt = "index.php?act=ttkh&&makh=".($_SESSION['user'])."&prd=".($_SESSION['prd']);
+    
     
     // session_start();
     // echo $_SESSION["user"];
@@ -47,9 +50,11 @@
                 else $qtv = "Chức vụ: USER";
             ?>
             <div class="cv"><?php echo $qtv ?></div>
-            <a href="<?php echo $tt ?>"><button type="submit" class="kh">Thông tin tài khoản</button></a>
+            <!-- <a href="<?php echo $tt ?>"><button type="submit" class="kh">Thông tin tài khoản</button></a> -->
 
             <?php
+
+                echo '<a href=" '.$tt.' "><button type="submit" class="kh">Thông tin tài khoản</button></a>';
                 $ad = "./admin/index.php?makh=". $test1;
                 
                 if($vai_tro == 1) echo '<a href=" '.$ad.' "><button type="submit" class="kh">Trang Admin</button></a>';
