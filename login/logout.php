@@ -3,7 +3,7 @@
     $setpw = "index.php?act=setpw";
     $changepf = "index.php?act=changepf";
 
-    $tt = "index.php?act=ttkh&&makh=".($_SESSION['user'])."&prd=".($_SESSION['prd']);
+    $tt = "index.php?act=ttkh&&makh=".($_SESSION['user']);
     
     
     // session_start();
@@ -54,7 +54,7 @@
 
             <?php
 
-                echo '<a href=" '.$tt.' "><button type="submit" class="kh">Thông tin tài khoản</button></a>';
+                echo '<a href=" '.$tt.' "><button type="" class="kh">Thông tin tài khoản</button></a>';
                 $ad = "./admin/index.php?makh=". $test1;
                 
                 if($vai_tro == 1) echo '<a href=" '.$ad.' "><button type="submit" class="kh">Trang Admin</button></a>';
