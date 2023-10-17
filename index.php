@@ -1,6 +1,7 @@
 <?php
 //60, 69
 session_start();
+// session_destroy();
 include "includes/connect.php";
 include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";

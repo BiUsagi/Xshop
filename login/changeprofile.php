@@ -2,7 +2,10 @@
 if (!isset($_SESSION["user"]))
     echo '<script>window.location.href = "./index.php?act=login";</script>';
 
+    
 $ma_kh = $_SESSION['user'];
+$res = "index.php?act=logout&makh=" . $_SESSION['user']; //gan  
+
 
 // Truy vấn cơ sở dữ liệu để lấy thông tin của khách hàng
 $sql = "SELECT * FROM khach_hang WHERE ma_kh = '$ma_kh'";
@@ -46,12 +49,17 @@ if (isset($_POST['capnhat'])) {
     } else {
         // Truy vấn SQL để cập nhật thông tin, bao gồm cả tên hình ảnh
         if ($hinh == '') {
+
+
             $sql = "UPDATE khach_hang SET ma_kh = '$makh', ho_ten = '$ho_ten', email = '$email' WHERE ma_kh = '$ma_kh'";
             if ($conn->query($sql) === TRUE) {
                 $thongbao = "Cập nhật thông tin thành công!";
             } else {
                 $thongbao = "Lỗi: " . $sql . "<br>" . $conn->error;
             }
+            $_SESSION['user'] = $makh;
+            // echo $_SESSION['user'];
+            $res = "index.php?act=logout&makh=" . $_SESSION['user']; //gan
         } else {
             $sql = "UPDATE khach_hang SET ma_kh = '$makh', ho_ten = '$ho_ten', email = '$email', hinh = '$hinh' WHERE ma_kh = '$ma_kh'";
             if ($conn->query($sql) === TRUE) {
@@ -74,7 +82,7 @@ if (isset($_POST['capnhat'])) {
         <form action="index.php?act=changepf" method="post" enctype="multipart/form-data">
 
             <?php
-            $res = "index.php?act=logout&makh=" . $_SESSION['user']; //gan
+            
             // $back = "index.php?act=logout&&makh=".$ma_kh;
             ?>
 
