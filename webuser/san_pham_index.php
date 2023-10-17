@@ -4,6 +4,7 @@ if (isset($_GET['prd'])) {
     $prd = $_GET['prd'];
     switch ($prd) {
         case 'home':
+            $_SESSION['prd'] = $_GET['prd'];
             include "webuser/home.php";
             break;
 
@@ -15,6 +16,7 @@ if (isset($_GET['prd'])) {
             break;    
 
         case 'timkiem':
+            $_SESSION['prd'] = $_GET['prd'];
             $tim = $_GET['tim'];
           
             include "webuser/listtk.php" ;
@@ -29,6 +31,7 @@ if (isset($_GET['prd'])) {
             break;
     }
 } else {
+    $_SESSION['prd'] = 'home    ';
     include "webuser/home.php";
 }
 

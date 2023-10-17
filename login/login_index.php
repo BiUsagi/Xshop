@@ -5,20 +5,23 @@ if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
         case 'logout':
-            $tt = "index.php?act=ttkh&&makh=" . ($_GET['makh']);
+            
+            $_SESSION['act'] = $_GET['act'];
+            $tt = "index.php?act=ttkh&&makh=".($_GET['makh'])."&prd=".($_SESSION['prd']);
             include "logout.php";
             break;
 
 
         case 'xoass':
-            session_destroy();
+            // session_destroy();
+            unset($_SESSION['user']);
             echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
             // header("location: index.php?act=login");
             break;
 
         case 'login':
 
-
+            $_SESSION['act'] = $_GET['act'];
             // echo $_SESSION['user'];
 
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
@@ -61,26 +64,33 @@ if (isset($_GET['act'])) {
             break;
 
         case 'ttkh':
+            $_SESSION['act'] = $_GET['act'];
             include "thongtin.php";
             break;
 
         case 'res':
+            $_SESSION['act'] = $_GET['act'];
             include "res.php";
             break;
 
         case 'changepf':
+            $_SESSION['act'] = $_GET['act'];
             include "changeprofile.php";
             break;
 
         case 'setpw':
+            $_SESSION['act'] = $_GET['act'];
             include "setpw.php";
             break;
 
         default:
+            $_SESSION['act'] = 'login';
             include "login.php";
             break;
+            
     }
 } else {
+    $_SESSION['act'] = 'login';
     include "login/login.php";
 }
 

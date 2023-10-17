@@ -7,7 +7,7 @@ include "includes/dao/hang-hoa.php";
 include "includes/dao/khach-hang.php"
 
 
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +17,9 @@ include "includes/dao/khach-hang.php"
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="login/logout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 
@@ -41,12 +40,12 @@ include "includes/dao/khach-hang.php"
                 <li id="search">
                     <!-- chuyển trang sau khi tìm kiếm -->
 
-                    
-                    <form action="webuser/san_pham_index.php?prd=xuly" method="post" enctype="multipart/form-data">
-                        <input type="text" name="tensp"> 
+
+                    <form action="timkiemsp.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="tensp">
                         <input type="submit" name="tim" value="Tìm kiếm">
                     </form>
-                    
+
                 </li>
             </ul>
         </div>
@@ -54,19 +53,95 @@ include "includes/dao/khach-hang.php"
         <div class="row mb  ">
             <div class="boxtrai mr demo">
 
-                <?php
-                    
-                    include "webuser/san_pham_index.php";
-                    echo $_SESSION['prd'];
-                ?>
+
+
+
+                <div class="row">
+                    <div class="banner n1">
+                        <img src="images/banner.png" alt>
+                    </div>
+                </div>
+
+
+
+                <div class="row container" id="tenhh">
+
+                    <?php
+
+                    $listhh = hang_hoa_select_all();
+                    $i = 0;
+                    foreach ($listhh as $hh) {
+                        extract($hh);
+                        $i++;
+                        echo '<div class="flexsp">';
+
+
+                        $hinhpath = "admin/sanpham/uploads/" . $hinh;
+                        if (is_file($hinhpath)) {
+                            $img = "<img src='" . $hinhpath . "'>";
+                        } else {
+                            $img = "no photo";
+                        }
+
+                        echo '    <div class="boxsp mr"> ';
+
+                        echo '    <div class=" img" >' . $img . '</div> ';
+
+                        if ($giam_gia > 0) {
+                            echo '    <div id="sale"></div>';
+                        } else {
+                            echo "";
+                        }
+
+                        echo '    <a href="#"> ' . $ten_hh . '</a>';
+
+                        $gia_ban = $don_gia / 100 * (100 - $giam_gia);
+
+                        echo "    <div class='khung_gia'> ";
+                        echo "    <p class='giahh'> Giá: $gia_ban </p> ";
+
+                        if ($giam_gia > 0) {
+                            $gia_goc = "Giá gốc: " . $don_gia;
+                            echo "<p class='gia_goc'> $gia_goc </p> ";
+                        } else {
+                            echo "<p class='gia_goc'> Không giảm giá </p> ";
+                        }
+
+
+                        echo '    </div> ';
+                        echo ' <div> <a href="# "class="cart-button"><i class="fa-solid fa-cart-plus fa-2xl "></i></a>  </div>';
+                        echo '    </div> ';
+                        echo '    </div> ';
+
+                        if ($i == 3)
+                            $i = 0;
+                        if ($i == 1 || $i == 2) {
+                            echo '    <div class="trong"> ';
+                            echo '    </div> ';
+                        }
+                    }
+                    ?>
+
+
+
+
+                    <!-- <div class="boxsp mr">
+                        <div class=" row img"> <img src="images/1.jpg" alt></div>
+                        <p>30$</p>
+                        <a href="#">dong ho </a>
+                    </div> -->
+
+
+
+
+                </div>
 
             </div>
 
             <div class="boxphai">
 
-                
-                <?php include"login/login_index.php" ?>  
-                <?php echo $_SESSION['act']; ?>
+
+                <?php include "login/login_index.php" ?>
 
                 <div class="row mb">
                     <div class="boxtitle">DANH MỤC</div>

@@ -24,7 +24,7 @@
     <div class="container">
         <?php
             extract(khach_hang_select_by_id($_GET['makh']));
-            $test1 = ($_GET['makh']);
+            $test1 = ($_SESSION['user']);
 
             $hinhpath = "./admin/khachhang/uploads/" . $hinh;
             if (is_file($hinhpath)) {
