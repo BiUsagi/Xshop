@@ -18,7 +18,7 @@
 ?>
 
 
-<div class="row mb" >
+<div class="row1 mb" >
     <div class="boxtitle">THÔNG TIN TÀI KHOẢN</div>
     <div class="boxcontent fomttaikhoan" id="body">
 

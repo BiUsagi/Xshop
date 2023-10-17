@@ -1,4 +1,4 @@
-<div class="row mb">
+<div class="row1 mb">
     <div class="boxtitle">ĐĂNG NHẬP</div>
     <div class="boxcontent fomttaikhoan">
 
@@ -9,19 +9,19 @@
             $res = "index.php?act=res"; //gan
             ?>
 
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Tên Đăng Nhập: <br>
                 <input type="text" name="madn" id=""><br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Mật Khẩu
                 <input type="password" name="pass" id=""> <br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
 
                 <input type="checkbox" name="" id=""> Ghi nhớ tài khoản?
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
 
             
                 <?php

@@ -41,7 +41,7 @@
     }
 </style>
 
-<div class="row mb">
+<div class="row1 mb">
     <div class="boxtitle">ĐỔI MẬT KHẨU</div>
     <div class="boxcontent fomttaikhoan">
 

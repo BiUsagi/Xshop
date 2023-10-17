@@ -1,15 +1,13 @@
 
 
 
-<div class="row">
     <div class="banner n1">
         <img src="images/banner.png" alt>
     </div>
-</div>
 
 
 
-<div class="row container" id="tenhh">
+<div class="container" id="tenhh">
 
     <?php
 
@@ -23,7 +21,7 @@
 
         $hinhpath = "admin/sanpham/uploads/" . $hinh;
         if (is_file($hinhpath)) {
-            $img = "<img src='" . $hinhpath . "'>";
+            $img = "<a href='../index.php?prd=chitietsp&product_id= $ma_hh'><img src='" . $hinhpath . "'></a>";
         } else {
             $img = "no photo";
         }
@@ -70,7 +68,7 @@
 
 
     <!-- <div class="boxsp mr">
-                        <div class=" row img"> <img src="images/1.jpg" alt></div>
+                        <div class=" row1 img"> <img src="images/1.jpg" alt></div>
                         <p>30$</p>
                         <a href="#">dong ho </a>
                     </div> -->

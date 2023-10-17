@@ -6,8 +6,7 @@ session_start();
 include "includes/connect.php";
 include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";
-include "includes/dao/khach-hang.php"
-
+include "includes/dao/khach-hang.php";
 
 ?>
 <!DOCTYPE html>
@@ -29,11 +28,11 @@ include "includes/dao/khach-hang.php"
 <body>
     <div class="boxcenter">
 
-        <div class="row mb header ">
+        <div class="row1 mb header ">
             <h1> SIÊU THỊ TRỰC TUYẾN</h1>
 
         </div>
-        <div class="row mb menu">
+        <div class="row1 mb menu">
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
@@ -53,11 +52,10 @@ include "includes/dao/khach-hang.php"
             </ul>
         </div>
 
-        <div class="row mb  ">
+        <div class="row1 mb  ">
             <div class="boxtrai mr demo">
 
                 <?php
-                    
                     include "webuser/san_pham_index.php";
                     // echo $_SESSION['prd'];
                 ?>
@@ -80,7 +78,7 @@ include "includes/dao/khach-hang.php"
                 // echo $_SESSION['act']; 
                 ?>
 
-                <div class="row mb">
+                <div class="row1 mb">
                     <div class="boxtitle">DANH MỤC</div>
                     <div class="boxcontent2 menudoc">
                         <ul>
@@ -105,26 +103,26 @@ include "includes/dao/khach-hang.php"
                         </form>
                     </div> -->
                 </div>
-                <div class="row mb">
+                <div class="row1 mb">
                     <div class="boxtitle">TOP 10 YÊU THÍCH</div>
-                    <div class=" row boxcontent ">
-                        <div class="row mb10 top10">
+                    <div class=" row1 boxcontent ">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
@@ -134,7 +132,7 @@ include "includes/dao/khach-hang.php"
             </div>
 
         </div>
-        <div class="row mb footer ">
+        <div class="row1 mb footer ">
             Copyright o 2020
         </div>
 
