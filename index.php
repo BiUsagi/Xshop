@@ -1,6 +1,7 @@
 <?php
 //60, 69
 session_start();
+// unset($_SESSION['timkiem']);
 // session_destroy();
 include "includes/connect.php";
 include "includes/dao/loai.php";

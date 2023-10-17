@@ -1,6 +1,10 @@
 <?php
+$tim = '';
+$tim = $_GET['tim'];
 // echo $_SESSION['prd'];
-$ten_hh = $_GET['tim'];
+// echo $_SESSION['timkiem'];
+// echo $_SESSION['prd'];
+$ten_hh = $_GET['tim']; 
 if ($ten_hh == '') {
     echo '<div class="row container" id="tenhh">';
     echo 'Vui lòng nhập từ khóa cần tìm';

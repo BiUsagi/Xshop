@@ -9,10 +9,14 @@ if (isset($_GET['prd'])) {
             break;
 
         case 'xuly':
+            unset($_SESSION['timkiem']);
+            // $_SESSION['timkiem'] = $_POST['tim'];
             if (isset($_POST['tim']) && ($_POST['tim'])){
             echo '<script>window.location.href = "../index.php?prd=timkiem&tim='.$_POST['tensp'].'";</script>';
-            // $tim = $_POST['tim'];
-            $_SESSION['prd'] = $_GET['prd'];
+            // $_SESSION['timkiem'] = $_POST['tensp'];
+            // echo $_POST['tim'];
+            // $_SESSION['prd'] = $_GET['prd'];
+            // $_SESSION['timkiem'] = $_POST['tim'];
             include "webuser/home.php";
             break;
             }
@@ -20,7 +24,8 @@ if (isset($_GET['prd'])) {
 
         case 'timkiem':
             $_SESSION['prd'] = $_GET['prd'];
-            $tim = $_GET['tim'];
+            
+            
           
             include "webuser/listtk.php" ;
             break;
