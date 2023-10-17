@@ -26,7 +26,7 @@ if (isset($_GET['prd'])) {
             break;
 
         case 'chitietsp':
-            include "setpw.php";
+            include "chitietsp.php";
             break;
 
         default:

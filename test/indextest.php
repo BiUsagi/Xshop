@@ -26,11 +26,11 @@ include "includes/dao/khach-hang.php"
 <body>
     <div class="boxcenter">
 
-        <div class="row mb header ">
+        <div class="row1 mb header ">
             <h1> SIÊU THỊ TRỰC TUYẾN</h1>
 
         </div>
-        <div class="row mb menu">
+        <div class="row1 mb menu">
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
@@ -50,13 +50,13 @@ include "includes/dao/khach-hang.php"
             </ul>
         </div>
 
-        <div class="row mb  ">
+        <div class="row1 mb  ">
             <div class="boxtrai mr demo">
 
 
 
 
-                <div class="row">
+                <div class="row1">
                     <div class="banner n1">
                         <img src="images/banner.png" alt>
                     </div>
@@ -64,7 +64,7 @@ include "includes/dao/khach-hang.php"
 
 
 
-                <div class="row container" id="tenhh">
+                <div class="row1 container" id="tenhh">
 
                     <?php
 
@@ -126,7 +126,7 @@ include "includes/dao/khach-hang.php"
 
 
                     <!-- <div class="boxsp mr">
-                        <div class=" row img"> <img src="images/1.jpg" alt></div>
+                        <div class=" row1 img"> <img src="images/1.jpg" alt></div>
                         <p>30$</p>
                         <a href="#">dong ho </a>
                     </div> -->
@@ -143,7 +143,7 @@ include "includes/dao/khach-hang.php"
 
                 <?php include "login/login_index.php" ?>
 
-                <div class="row mb">
+                <div class="row1 mb">
                     <div class="boxtitle">DANH MỤC</div>
                     <div class="boxcontent2 menudoc">
                         <ul>
@@ -168,26 +168,26 @@ include "includes/dao/khach-hang.php"
                         </form>
                     </div> -->
                 </div>
-                <div class="row mb">
+                <div class="row1 mb">
                     <div class="boxtitle">TOP 10 YÊU THÍCH</div>
-                    <div class=" row boxcontent ">
-                        <div class="row mb10 top10">
+                    <div class=" row1 boxcontent ">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
-                        <div class="row mb10 top10">
+                        <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
                         </div>
@@ -197,7 +197,7 @@ include "includes/dao/khach-hang.php"
             </div>
 
         </div>
-        <div class="row mb footer ">
+        <div class="row1 mb footer ">
             Copyright o 2020
         </div>
 

@@ -56,7 +56,7 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
 ?>
 
 
-<div class="row mb">
+<div class="row1 mb">
     <div class="boxtitle">ĐĂNG KÝ</div>
     <div class="boxcontent fomttaikhoan">
 
@@ -67,29 +67,29 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
             $res = "index.php?act=login"; //gan
             ?>
 
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Tên Đăng Nhập <br>
                 <input type="text" name="ma_kh" id="" value="<?php echo $ma_kh_input; ?>"><br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Họ và tên <br>
                 <input type="text" name="ho_ten" id="" value="<?php echo $ho_ten_input; ?>"><br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Email<br>
                 <input type="text" name="email" id="" value="<?php echo $email_input; ?>"><br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Mật Khẩu
                 <input type="password" name="pass" id=""> <br>
             </div>
-            <div class="row mb10">
+            <div class="row1 mb10">
                 Xác Nhận Mật Khẩu
                 <input type="password" name="checkpass" id=""> <br>
             </div>
 
 
-            <div class="row mb10">
+            <div class="row1 mb10">
                 <?php
                 if (isset($thongbao)) {
                     echo '<p style="color: red; margin-top: -5px; margin-bottom: -5px; ">' . $thongbao . '</p>';

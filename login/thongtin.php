@@ -1,5 +1,5 @@
 
-<div class="row mb" >
+<div class="row1 mb" >
     <div class="boxtitle">CHI TIẾT TÀI KHOẢN</div>
     <div class="boxcontent fomttaikhoan" id="body">
 
