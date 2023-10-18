@@ -6,6 +6,7 @@ if (isset($_GET['product_id'])) {
     echo 'Sản phẩm không tồn tại.';
 }
 
+ 
 
 $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
 
@@ -49,6 +50,11 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
     .big-size {
         font-size: 13px;
     }
+    .listcm{
+        background-color: aqua;
+        min-height: 100px;
+        margin-top: 20px;
+    }
     </style>
 </head>
 
@@ -85,7 +91,9 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
 
 
                 <p class="big-size"><span class="m-title">Mô tả: </span><br>
-                    <?php echo $product['mo_ta']  ?>
+                    <?php echo $product['mo_ta'];
+                    if($product['mo_ta']=='') echo "Không có mô tả.";  
+                    ?>
                 </p>
 
                 <!-- Thêm nút "Thêm vào giỏ hàng" và "Mua ngay" -->
@@ -103,21 +111,57 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
     <div class="container mt-4">
         <h2>Bình luận sản phẩm</h2>
             <div class="col-md-12">
-                <form action="luu_binh_luan.php" method="post">
-                    <div class="form-group">
+                <form action="index.php?prd=guicmt&product_id=<?php echo $_GET['product_id'] ?>" method="post">
+                    <!-- <div class="form-group">
                         <label for="ten">Tên:</label>
                         <input type="text" class="form-control" id="ten" name="ten" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="binhluan">Bình luận:</label>
-                        <textarea class="form-control" id="binhluan" name="binhluan" rows="4" required></textarea>
-                    </div>
-                    <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                    <button type="submit" class="btn btn-primary">Gửi bình luận</button>
+                    </div> -->
+                    
+                    <?php 
+                        if(isset($_SESSION['user'])){
+                            ?>
+                                <input type="hidden" name="ma_hh" value="<?php echo $_GET['product_id'] ?>">
+                                <input type="hidden" name="ma_kh" value="<?php echo $_SESSION['user'] ?>">
+                                <input type="hidden" name="ngay_bl" value="<?php date('d/m/Y') ?>">
+
+
+                                <div class="form-group">
+                                <label for="binhluan">Bình luận:</label>
+                                <textarea class="form-control" id="binhluan" name="binhluan" rows="4" required></textarea>
+                                </div>
+                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                                <button type="submit" class="btn btn-primary" name="guicmt">Gửi bình luận</button>
+                                <?php
+                                if(isset($tbbl)) echo "<div><br> $tbbl </div>";
+                                ?>
+                            <?php
+                        }else{?>
+                            
+                                <div class="form-group">
+                                <label for="binhluan">Bình luận:</label>
+                                <textarea class="form-control" id="binhluan" name="binhluan" rows="4" required></textarea disabled>
+                                </div>
+                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                                <button type="submit" class="btn btn-primary" disabled>Đăng nhập mới có thể bình luận</button>
+
+                        <?php
+                        }?>
+
+                        <div class="listcm">
+
+                        </div>
+
+
+
+                   
                 </form>
             </div>
     </div>
+    
 
+    <?php
+        // include "binh_luan.php";
+    ?>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
