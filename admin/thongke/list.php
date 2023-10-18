@@ -2,11 +2,6 @@
     <h1>THỐNG KÊ</h1>
 </div>
 <div class="fracontent">
-    <div class="mb-3" style="margin-bottom: 20px;">
-        <input type="button" class="btn btn-primary" value="Chọn tất cả" onclick="selectAll()">
-        <input type="button" class="btn btn-secondary" value="Bỏ chọn tất cả" onclick="deselectAll()">
-        <input type="button" class="btn btn-danger" value="Xóa các mục đã chọn">
-    </div>
     <div class=" mb10 frmdsloai">
         <table class="table table-bordered  colortable">
             <tr>
