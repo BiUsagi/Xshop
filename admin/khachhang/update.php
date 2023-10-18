@@ -61,31 +61,7 @@ if (isset($_POST['submit']) && ($_POST['submit'])) {
                         echo "selected"; ?>>1 - Admin</option>
                 </select>
             </div>
-            <div class=" mb-3">
-                <label for="ho_ten" class="form-label">Họ Và Tên</label>
-                <input type="text" name="ho_ten" class="form-control" value="<?php if (isset($ho_ten))
-                    echo $ho_ten; ?>" disabled>
-            </div>
-            <div class="mb-3">
-                <label for="mat_khau" class="form-label">Mật Khẩu</label>
-                <input type="text" name="mat_khau" class="form-control" value="<?php if (isset($mat_khau))
-                    echo $mat_khau; ?>" disabled>
-            </div>
-
-            <div class=" mb-3">
-                <label for="hinh" class="form-label">Hình ảnh</label>
-                <?php
-                if (isset($img))
-                    echo $img;
-                ?>
-            </div>
-            <div class=" mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" name="email" class="form-control" value="<?php if (isset($email))
-                    echo $email; ?>" disabled>
-            </div>
-
-
+            
 
 
             <div class=" mb-3" style="margin-top: 20px;">

@@ -26,8 +26,8 @@
 
 
                     case 'xoa':
-                        if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                            loai_delete($_GET['maloai']);
+                        if (isset($_GET['makh']) && ($_GET['makh'] > 0)) {
+                            khach_hang_delete($_GET['makh']);
                         }
                         include "list.php";
                         break;
