@@ -37,7 +37,7 @@
                 }
 
                 $suakh = "index.php?act=khachhang&khachhang=sua&makh=" . $ma_kh;
-                $xoakh = "index.php?act=khachhang&khachhanh=xoa&makh=" . $ma_kh;
+                $xoakh = "index.php?act=khachhang&khachhang=xoa&makh=" . $ma_kh;
 
                 if($vai_tro == 1) $qtv = "Admin";
                 else $qtv = "User";
