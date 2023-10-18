@@ -40,8 +40,8 @@ include "includes/connect.php";
                 include "binhluan/index-binhluan.php";
                 break;
 
-            case 'thonge':
-                include "danhmuc/category.php";
+            case 'thongke':
+                include "thongke/index-thongke.php";
                 break;
 
             default:
@@ -86,13 +86,5 @@ include "includes/connect.php";
         });
     }
 
-    // Bắt sự kiện khi checkbox "Chọn tất cả" được thay đổi
-    const checkAllCheckbox = document.getElementById('checkAll');
-    checkAllCheckbox.addEventListener('change', function () {
-        if (this.checked) {
-            selectAll();
-        } else {
-            deselectAll();
-        }
-    });
+ 
 </script>

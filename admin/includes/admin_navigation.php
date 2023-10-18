@@ -56,7 +56,7 @@
                 <a href="./index.php?act=binhluan&binhluan=home"> Bình Luận</a>
             </li>
             <li>
-                <a href="./index.php?act=thongke"> Thống Kê</a>
+                <a href="./index.php?act=thongke&thongke=home"> Thống Kê</a>
             </li>
 
 
