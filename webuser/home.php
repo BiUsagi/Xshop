@@ -36,7 +36,7 @@
             echo "";
         }
 
-        echo '    <a href="#"> ' . $ten_hh . '</a>';
+        echo '<a href="../index.php?prd=chitietsp&product_id= '.$ma_hh.'">' . $ten_hh . '</a>';
 
         $gia_ban = $don_gia / 100 * (100 - $giam_gia);
 
