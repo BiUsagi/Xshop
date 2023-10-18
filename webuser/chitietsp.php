@@ -86,7 +86,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         .giaifl{
             clear: both;;
         }
-        .tenkh{
+        .phaibl .tenkh{
             font-weight: bold;
             font-size: 13px;
             color: black;
@@ -97,6 +97,9 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         }
         .ngaybl{
             color: gray;
+        }
+        .duoi{
+            margin-left: -15px;
         }
     </style>
 </head>
