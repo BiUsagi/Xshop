@@ -66,6 +66,9 @@ body {
 .small-cell-9 {
     width: 9vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
 }
+.small-cell-13 {
+    width: 13vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
+}
 .small-cell-15 {
     width: 15vw; /* Điều chỉnh chiều rộng của ô theo nhu cầu */
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION["user"])){ 
+if (!isset($_SESSION["user"])) {
     // header( "location: ../index.php?act=login");
     echo '<script>window.location.href = "../index.php?act=login";</script>';
 }
@@ -36,6 +36,10 @@ include "includes/connect.php";
                 include "khachhang/index-khachhang.php";
                 break;
 
+            case 'binhluan':
+                include "binhluan/index-binhluan.php";
+                break;
+
             case 'thonge':
                 include "danhmuc/category.php";
                 break;
@@ -63,3 +67,32 @@ include "includes/connect.php";
     <!-- footer -->
     <?php include "includes/admin_footer.php"; ?>
     <!-- end footer -->
+
+
+    <script>
+    // Hàm chọn tất cả các checkbox
+    function selectAll() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        });
+    }
+
+    // Hàm bỏ chọn tất cả các checkbox
+    function deselectAll() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    }
+
+    // Bắt sự kiện khi checkbox "Chọn tất cả" được thay đổi
+    const checkAllCheckbox = document.getElementById('checkAll');
+    checkAllCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+            selectAll();
+        } else {
+            deselectAll();
+        }
+    });
+</script>
