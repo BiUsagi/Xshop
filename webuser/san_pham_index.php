@@ -34,6 +34,12 @@ if (isset($_GET['prd'])) {
             include "chitietsp.php";
             break;
 
+        case 'xoacmt':
+            $mabl = $_GET['mabl'];
+            binh_luan_delete($mabl);
+            include "chitietsp.php";
+            break;
+
         case 'guicmt':
             if (isset($_POST['guicmt'])) {
                 $mahhbl = $_POST['ma_hh'];

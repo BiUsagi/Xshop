@@ -5,7 +5,7 @@ if (isset($_GET['product_id'])) {
 } else {
     echo 'Sản phẩm không tồn tại.';
 }
-
+$bienxoa = $_GET['product_id'];
 
 
 $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
@@ -86,7 +86,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         .giaifl{
             clear: both;;
         }
-        .tenkh{
+        .phaibl .tenkh{
             font-weight: bold;
             font-size: 13px;
             color: black;
@@ -97,6 +97,9 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         }
         .ngaybl{
             color: gray;
+        }
+        .duoi{
+            margin-left: -15px;
         }
     </style>
 </head>
@@ -205,6 +208,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
                                 extract($cmt);
                                 // echo $ma_kh;
                                 $khbl = khach_hang_select_by_id($ma_kh);
+                                $makh = $ma_kh;
                                 extract($khbl);
 
                                 $hinhpath = "../admin/khachhang/uploads/" . $hinh;
@@ -217,7 +221,18 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
                                 <div class="phaibl">
                                     <div class="tenkh"><?php echo $ho_ten ?></div>
                                     <div class="noidungbl"><?php echo $noi_dung ?></div>
-                                    <div class="ngaybl">Đăng ngày: <?php echo $ngay_bl ?></div>
+                                    <div class="ngaybl">
+                                        Đăng ngày: <?php echo $ngay_bl ?> 
+                                        <?php $xoabl = "index.php?prd=xoacmt&mabl=$ma_bl&product_id=$bienxoa"; 
+                                        if(isset($_SESSION['user'])){
+                                            if($makh == $_SESSION['user']){
+                                                echo '<a href="'. $xoabl .'">Xóa</a>';
+                                            }
+                                        }
+                                        
+                                        ?>
+                                       
+                                    </div>
                                 </div>
                             </div>
                             <div class="giaifl"></div>
