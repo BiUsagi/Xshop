@@ -17,7 +17,7 @@ if (isset($_POST['submit']) && ($_POST['submit'])) {
     $ma_kh = $_POST['ma_kh'];
     $kich_hoat = $_POST['kich_hoat'];
     $vai_tro = $_POST['vai_tro'];
-    $sql = "UPDATE khach_hang SET kich_hoat = $kich_hoat, vai_tro = $vai_tro WHERE ma_kh = $ma_kh";
+    $sql = "UPDATE khach_hang SET kich_hoat = $kich_hoat, vai_tro = $vai_tro WHERE ma_kh = '$ma_kh' ";
     $conn->query($sql);
   
 }
