@@ -85,6 +85,4 @@ include "includes/connect.php";
             checkbox.checked = false;
         });
     }
-
- 
-</script>
+    </script>
