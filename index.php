@@ -7,6 +7,8 @@ include "includes/connect.php";
 include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";
 include "includes/dao/khach-hang.php";
+include "includes/dao/binh-luan.php";
+
 
 ?>
 <!DOCTYPE html>
