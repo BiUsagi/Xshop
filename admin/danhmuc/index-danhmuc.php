@@ -34,14 +34,14 @@
                                 $sql_delete_loai = "DELETE FROM loai WHERE ma_loai = $loai_can_xoa";
                                 
                                 if ($conn->query($sql_delete_loai) === TRUE) {
-                                    echo "Xóa loại và cập nhật sản phẩm thành công.";
+                                    echo "Xóa loại và cập nhật danh mục thành công.";
                                     // $xoa = 1;
                                     // $spcanxoa = hang_hoa_select_by_loai($xoa);
                                     // foreach( $spcanxoa as $sp){
                                     //     extract($sp);
                                     //     echo $ma_hh;
                                     //     hang_hoa_delete($ma_hh);
-                                    }
+                                    // }
                                 } else {
                                     echo "Lỗi xóa loại: " . $conn->error;
                                 }
