@@ -1,5 +1,6 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loai.php"; ?>
+<?php include "dao/hang-hoa.php"; ?>
 
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
@@ -34,6 +35,13 @@
                                 
                                 if ($conn->query($sql_delete_loai) === TRUE) {
                                     echo "Xóa loại và cập nhật sản phẩm thành công.";
+                                    // $xoa = 1;
+                                    // $spcanxoa = hang_hoa_select_by_loai($xoa);
+                                    // foreach( $spcanxoa as $sp){
+                                    //     extract($sp);
+                                    //     echo $ma_hh;
+                                    //     hang_hoa_delete($ma_hh);
+                                    }
                                 } else {
                                     echo "Lỗi xóa loại: " . $conn->error;
                                 }
