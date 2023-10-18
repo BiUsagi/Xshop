@@ -2,6 +2,7 @@
 <?php include "dao/binh-luan.php"; ?>
 <?php include "dao/hang-hoa.php"; ?>
 
+
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -19,8 +20,8 @@
  
 
                     case 'xoa':
-                        if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                            loai_delete($_GET['maloai']);
+                        if (isset($_GET['mabl']) && ($_GET['mabl'] > 0)) {
+                            binh_luan_delete($_GET['mabl']);
                         }
                         include "list.php";
                         break;

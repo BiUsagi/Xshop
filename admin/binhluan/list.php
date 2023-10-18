@@ -26,8 +26,8 @@
             foreach ($listbl as $binhluan) {
                 extract($binhluan);
                 $sp = hang_hoa_select_by_id($ma_hh);
-                $suakh = "index.php?act=khachhang&khachhang=sua&maloai=" . $ma_kh;
-                $xoakh = "index.php?act=khachhang&khachhanh=xoa&maloai=" . $ma_kh;
+                // $suakh = "index.php?act=khachhang&khachhang=sua&maloai=" . $ma_kh;
+                $xoabl = "index.php?act=binhluan&binhluan=xoa&mabl=" . $ma_bl;
 
 
                 echo '<tr>
@@ -41,7 +41,7 @@
                     <td class="center-checkbox small-cell-9">' . $ngay_bl . '</td> 
                     <td class="small-cell-9 center-checkbox">
                         
-                        <a href="' . $xoakh .'"><button class="btn btn-danger">Xóa</button></a>
+                        <a href="' . $xoabl .'"><button class="btn btn-danger">Xóa</button></a>
                     </td>
                     </tr>';
             } 
