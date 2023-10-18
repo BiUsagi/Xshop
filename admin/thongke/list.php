@@ -18,10 +18,9 @@
                 <th class="vertical-center">Giá Cao Nhất</th>
                 <th class="vertical-center">Giá Trung Bình</th>
             </tr>
-           
+         
         </table>
     </div>
-    <!-- <a href="' . $suakh . '"><button class="btn btn-primary">Sửa</button></a> -->
 </div>
 
 
