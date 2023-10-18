@@ -22,6 +22,7 @@
             $listdanhmuc = loai_select_all();
             foreach ($listdanhmuc as $loai) {
                 extract($loai);
+                if($ma_loai == 1) continue;
                 $suadm = "index.php?act=adddm&danhmuc=sua&maloai=" . $ma_loai;
                 $xoadm = "index.php?act=adddm&danhmuc=xoa&maloai=" . $ma_loai;
                 echo '<tr>
