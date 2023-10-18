@@ -36,8 +36,8 @@
                     $img = "no photo";
                 }
 
-                $suakh = "index.php?act=khachhang&khachhang=sua&maloai=" . $ma_kh;
-                $xoakh = "index.php?act=khachhang&khachhanh=xoa&maloai=" . $ma_kh;
+                $suakh = "index.php?act=khachhang&khachhang=sua&makh=" . $ma_kh;
+                $xoakh = "index.php?act=khachhang&khachhanh=xoa&makh=" . $ma_kh;
 
                 if($vai_tro == 1) $qtv = "Admin";
                 else $qtv = "User";

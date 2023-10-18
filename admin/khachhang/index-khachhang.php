@@ -23,7 +23,7 @@
                     case 'list':
                         include "list.php";
                         break;
- 
+
 
                     case 'xoa':
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
@@ -34,27 +34,16 @@
 
 
                     case 'sua':
-                        if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                            $dm = loai_select_by_id($_GET['maloai']);
-                        }
-
+                      
                         include "update.php";
                         break;
 
-
-                    case 'updatedm':
-                        if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                            $ten_loai = $_POST['ten_loai'];
-                            $ma_loai = $_POST['ma_loai'];
-                            loai_update($ma_loai, $ten_loai);
-                        }
-                        include "list.php";
-                        break;
+                   
                     default:
                         include "list.php";
                         break;
-                    }
                 }
+            }
             ?>
 
         </div>

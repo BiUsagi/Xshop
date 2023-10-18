@@ -27,11 +27,22 @@
 
                     case 'xoa':
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
-                            loai_delete($_GET['maloai']);
+                            $loai_can_xoa = $_GET['maloai'];
+                            $sql_update_sanpham = "UPDATE hang_hoa SET ma_loai = 1 WHERE ma_loai = $loai_can_xoa";
+                            if ($conn->query($sql_update_sanpham) === TRUE) {
+                                $sql_delete_loai = "DELETE FROM loai WHERE ma_loai = $loai_can_xoa";
+                                
+                                if ($conn->query($sql_delete_loai) === TRUE) {
+                                    echo "Xóa loại và cập nhật sản phẩm thành công.";
+                                } else {
+                                    echo "Lỗi xóa loại: " . $conn->error;
+                                }
+                            } else {
+                                echo "Lỗi cập nhật sản phẩm: " . $conn->error;
+                            }
                         }
                         include "list.php";
                         break;
-
 
                     case 'sua':
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
