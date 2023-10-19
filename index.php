@@ -93,7 +93,7 @@ include "includes/dao/binh-luan.php";
                                 echo '<li><a href="">' . $ten_loai . '</a></li>';
                             }
                             ?>
-
+    
                             <!-- <li><a href="">Đồng hồ</a></li>
                                 <li><a href="">Laptop</a></li>
                                 <li><a href="">Điện Thoại</a></li>
