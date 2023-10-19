@@ -69,6 +69,10 @@ if (isset($_GET['prd'])) {
             include "chitietsp.php";
             break;
 
+            case 'chuyentrang':
+                include "listdm.php";
+                break;
+
         default:
             include "webuser/home.php";
             break;

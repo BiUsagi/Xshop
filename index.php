@@ -90,10 +90,12 @@ include "includes/dao/binh-luan.php";
                             foreach ($listdm as $dm) {
                                 extract($dm);
                                 if($ma_loai == 1) continue;
-                                echo '<li><a href="">' . $ten_loai . '</a></li>';
+
+                                $chuyentrang = "index.php?prd=chuyentrang&maloai=".$ma_loai;
+                                echo '<li><a href=" '.$chuyentrang.' ">' . $ten_loai . '</a></li>';
                             }
                             ?>
-
+    
                             <!-- <li><a href="">Đồng hồ</a></li>
                                 <li><a href="">Laptop</a></li>
                                 <li><a href="">Điện Thoại</a></li>
