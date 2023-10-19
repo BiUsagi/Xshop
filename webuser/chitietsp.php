@@ -121,10 +121,10 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
                 </h1>
                 <p>
                     <span class="big-text">
-                        <?php echo $gia_ban . "₫"; ?>
+                        <?php echo number_format($gia_ban, 0, ',', '.') . "₫"; ?>
                     </span>
                     <?php if ($product['giam_gia'] > 0) {
-                        echo "<del class='gia-goc'>" . $product['don_gia'] . "₫</del>";
+                        echo "<del class='gia-goc'>" . number_format($product['don_gia'], 0, ',', '.') . "₫</del>";
                     } else {
                         echo "";
                     }

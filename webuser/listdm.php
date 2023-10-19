@@ -37,10 +37,10 @@
         $gia_ban = $don_gia / 100 * (100 - $giam_gia);
 
         echo "    <div class='khung_gia'> ";
-        echo "    <p class='giahh'> Giá: $gia_ban </p> ";
+        echo "    <p class='giahh'> Giá: " . number_format($gia_ban, 0, ',', '.') . "₫ </p> ";
 
         if ($giam_gia > 0) {
-            $gia_goc = "Giá gốc: " . $don_gia;
+            $gia_goc = "Giá gốc:" . number_format($don_gia, 0, ',', '.') . "₫";
             echo "<p class='gia_goc'> $gia_goc </p> ";
         } else {
             echo "<p class='gia_goc'> Không giảm giá </p> ";
