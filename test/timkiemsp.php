@@ -115,7 +115,7 @@ if (isset($_POST['tim']) && ($_POST['tim'])) {
                                 }
                                 echo '    <div class="boxsp mr"> ';
                                 echo '    <div class=" img" >' . $img . '</div> ';
-                                if ($giam_gia > 0) {
+                                if ($giam_gia > 0) { 
                                     echo '    <div id="sale"></div>';
                                 } else {
                                     echo "";

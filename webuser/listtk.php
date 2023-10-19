@@ -52,7 +52,7 @@ if ($ten_hh == '') {
 
                 $hinhpath = "admin/sanpham/uploads/" . $hinh;
                 if (is_file($hinhpath)) {
-                    $img = "<img src='" . $hinhpath . "'>";
+                    $img = "<a href='../index.php?prd=chitietsp&product_id= $ma_hh'><img src='" . $hinhpath . "'></a>";
                 } else {
                     $img = "no photo";
                 }
@@ -63,7 +63,7 @@ if ($ten_hh == '') {
                 } else {
                     echo "";
                 }
-                echo '    <a href="#"> ' . $ten_hh . '</a>';
+                echo '<a href="../index.php?prd=chitietsp&product_id= '.$ma_hh.'">'. $ten_hh . '</a>';
                 $gia_ban = $don_gia / 100 * (100 - $giam_gia);
                 echo "    <div class='khung_gia'> ";
                 echo "    <p class='giahh'> Giá: $gia_ban </p> ";
