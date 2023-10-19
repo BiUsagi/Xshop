@@ -17,7 +17,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
     <style>
         .img-cover {
             object-fit: cover;
-            width: 200px;
+            width: 260px;
             height: 250px;
         }
 
@@ -108,14 +108,14 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
 
 <body>
     <main class="container mt-4 ">
-        <div class="col-md-4">
+        <div class="col-md-5">
             <?php
             $hinhpath = "../admin/sanpham/uploads/" . $product['hinh'];
             echo "<img src='" . $hinhpath . "' class=' img-cover'>";
             ?>
 
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="img-title">
                 <h1 class="mgr-bot">
                     <?php echo $product['ten_hh']; ?>
