@@ -97,6 +97,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         .comment-content {
             float: left;
             margin-top: 10px;
+            font-size: 13px;
         }
 
         .giaifl {
