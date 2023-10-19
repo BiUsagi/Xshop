@@ -9,7 +9,6 @@ include "includes/dao/hang-hoa.php";
 include "includes/dao/khach-hang.php";
 include "includes/dao/binh-luan.php";
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
