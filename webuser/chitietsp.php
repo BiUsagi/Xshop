@@ -51,55 +51,56 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
             font-size: 13px;
         }
 
-        .listcm {
-            /* background-color: aqua; */
-            min-height: 100px;
-            margin-top: 20px;
+        /* CSS cho phần bình luận */
+        .comment-container {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            position: relative;
         }
 
-        .dong_binh_luan {
-            width: 100%;
-            /* position: relative; */
-            border-top: 1px solid #cecece;
-            padding-top: 10px;
-            padding-bottom: 5px;
-        }
-
-        .dong_binh_luan .anhkh {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid gray;
-        }
-        .traibl{
-            /* position: absolute; */
-            float: left;
+        .comment-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
             left: 0;
-            margin-right: 10px;
-            margin-bottom: 15px;
+            width: 100%;
+            height: 2px;
+            /* Chiều rộng của đường thẳng trên */
+            background: #ccc;
+            z-index: -1;
         }
-        .phaibl{
-            /* position: absolute; */
+
+        .user-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             float: left;
-            left: 90px;
+            margin-right: 10px;
+            object-fit: cover;
         }
-        .giaifl{
-            clear: both;;
+
+        .user-info {
+            width: 87%;
+            float: right;
         }
-        .phaibl .tenkh{
+
+        .user-name {
             font-weight: bold;
             font-size: 13px;
-            color: black;
         }
-        .noidungbl{
-            font-size: 13px;
-            color: black;
+
+        .comment-date {
+            color: #777;
         }
-        .ngaybl{
-            color: gray;
+
+        .comment-content {
+            float: left;
+            margin-top: 10px;
         }
-        .duoi{
-            margin-left: -15px;
+
+        .giaifl {
+            clear: both;
         }
     </style>
 </head>
@@ -191,20 +192,20 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
                     <div class="form-group">
                         <label for="binhluan">Bình luận:</label>
                         <textarea class="form-control" id="binhluan" name="binhluan" rows="4" required></textarea disabled>
-                                        </div>
-                                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                                        <button type="submit" class="btn btn-primary" disabled>Đăng nhập mới có thể bình luận</button>
+                                            </div>
+                                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                                            <button type="submit" class="btn btn-primary" disabled>Đăng nhập mới có thể bình luận</button>
 
-                                <?php
+                                    <?php
                 } ?>
 
-                        <div class="listcm">
+                        <div >
                             <?php
                             $listcmt = binh_luan_select_by_hang_hoa($_GET['product_id']);
-                            
-                            $i=1;
+
+                            $i = 1;
                             foreach ($listcmt as $cmt) {
-                                $i=0;
+                                $i = 0;
                                 extract($cmt);
                                 // echo $ma_kh;
                                 $khbl = khach_hang_select_by_id($ma_kh);
@@ -212,33 +213,33 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
                                 extract($khbl);
 
                                 $hinhpath = "../admin/khachhang/uploads/" . $hinh;
-                                $imgkh = "<img src='" . $hinhpath . "' class='anhkh'>";
-                            ?>
-                            <div class="dong_binh_luan">
-                                <div class="traibl">
-                                    <?php echo $imgkh ?>
-                                </div>
-                                <div class="phaibl">
-                                    <div class="tenkh"><?php echo $ho_ten ?></div>
-                                    <div class="noidungbl"><?php echo $noi_dung ?></div>
-                                    <div class="ngaybl">
-                                        Đăng ngày: <?php echo $ngay_bl ?> 
-                                        <?php $xoabl = "index.php?prd=xoacmt&mabl=$ma_bl&product_id=$bienxoa"; 
-                                        if(isset($_SESSION['user'])){
-                                            if($makh == $_SESSION['user']){
-                                                echo '<a href="'. $xoabl .'">Xóa</a>';
-                                            }
-                                        }
-                                        
-                                        ?>
-                                       
+                                $imgkh = "<img class='user-avatar' src='" . $hinhpath . "' class='anhkh'>";
+                                ?>
+                                <div class="comment-container">
+                                    <div>
+                                        <?php echo $imgkh ?>
                                     </div>
+                                    <div class="user-info">
+                                        <div class="user-name"><?php echo $ho_ten ?></div>
+                                        <div class="comment-date">
+                                            Đăng ngày: <?php echo $ngay_bl ?> 
+                                            <?php $xoabl = "index.php?prd=xoacmt&mabl=$ma_bl&product_id=$bienxoa";
+                                            if (isset($_SESSION['user'])) {
+                                                if ($makh == $_SESSION['user']) {
+                                                    echo '<a href="' . $xoabl . '"> - Xóa</a>';
+                                                }
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="comment-content"><?php echo $noi_dung ?></div>
+                                    </div>
+                                <div class="giaifl"></div>
+                                
                                 </div>
-                            </div>
-                            <div class="giaifl"></div>
-                            <?php
+                                <?php
                             }
-                            if ($i == 1) echo"Không có bình luận";
+                            if ($i == 1)
+                                echo "Không có bình luận";
                             ?>
                             
                         </div>
