@@ -56,7 +56,7 @@
 </style>
 
 <div class="row1 mb">
-    <div class="boxtitle">ĐỔI MẬT KHẨU</div>
+    <div class="boxtitle">QUÊN MẬT KHẨU</div>
     <div class="boxcontent fomttaikhoan">
 
         <form action="index.php?act=quenmk" method="post">
