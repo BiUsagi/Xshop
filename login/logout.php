@@ -67,7 +67,7 @@
         
 
         <div class="duoi">
-            <li><a href="#">Giỏ hàng</a></li>
+            <li><a href="../index.php?prd=viewcart">Giỏ hàng</a></li>
             <li><a href="<?php echo $changepf ?>">Thay đổi thông tin</a></li>
             <li><a href="<?php echo $setpw ?>">Đổi mật khẩu</a></li>
             <li><a href="<?php echo $dx ?>">Đăng xuất</a></li>

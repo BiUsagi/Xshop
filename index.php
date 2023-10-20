@@ -1,6 +1,8 @@
 <?php
 //60, 69
 session_start();
+if (!isset($_SESSION['mycart']))
+    $_SESSION['mycart'] = array();
 // unset($_SESSION['timkiem']);
 // session_destroy();
 include "includes/connect.php";
@@ -8,6 +10,9 @@ include "includes/dao/loai.php";
 include "includes/dao/hang-hoa.php";
 include "includes/dao/khach-hang.php";
 include "includes/dao/binh-luan.php";
+include "includes/cart.php";
+
+
 
 ?>
 <!DOCTYPE html>
