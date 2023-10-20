@@ -14,6 +14,8 @@ include "includes/cart.php";
 
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,28 +116,40 @@ include "includes/cart.php";
                 </div>
                 <div class="row1 mb">
                     <div class="boxtitle">TOP 10 YÊU THÍCH</div>
+
+                    
                     <div class=" row1 boxcontent ">
-                        <div class="row1 mb10 top10">
+
+                            <?php
+                                $top10 = hang_hoa_select_top10();
+                                foreach ($top10 as $sptop10) {
+                                    extract($sptop10);
+
+
+                                    $hinhpath = "admin/sanpham/uploads/" . $hinh;
+                                    if (is_file($hinhpath)) {
+                                        $img = "<a href='../index.php?prd=chitietsp&product_id= $ma_hh'><img src='" . $hinhpath . "' style='width:30px; height:30px;></a>";
+                                    } else {
+                                        $img = "no photo";
+                                    }
+
+                                    echo '<div class="row1 mb10 top10">';
+                                    echo  $img;
+                                    echo "<a href='123'> $ten_hh </a>";
+                                    echo '</div> ';
+                                }
+                            ?>
+
+
+                        <!-- <div class="row1 mb10 top10">
                             <img src="images/6.jpg" alt="">
                             <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row1 mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row1 mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row1 mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
-                        <div class="row1 mb10 top10">
-                            <img src="images/6.jpg" alt="">
-                            <a href="#">Sir Alex</a>
-                        </div>
+                        </div> -->
+                        
+
+
                     </div>
+                    
 
                 </div>
             </div>

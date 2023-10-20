@@ -2,6 +2,7 @@
 if (isset($_GET['product_id'])) {
     $product_id = $_GET['product_id'];
     $product = hang_hoa_select_by_id($product_id);
+    hang_hoa_tang_so_luot_xem($product_id);
 } else {
     echo 'Sản phẩm không tồn tại.';
 }
