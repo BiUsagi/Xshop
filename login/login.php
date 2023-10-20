@@ -6,7 +6,8 @@
         <form action="index.php?act=login" method="post">
 
             <?php
-            $res = "index.php?act=res"; //gan
+            $res = "index.php?act=res";
+            $quenmk = "index.php?act=quenmk"; 
             ?>
 
             <div class="row1 mb10">
@@ -36,7 +37,7 @@
             </div>
 
         </form>
-        <li><a href="#">Quên mật khẩu</a></li>
+        <li><?php echo '<a href="' . $quenmk . '">Quên mật khẩu</a>' ?></li>
         <li><?php echo '<a href="' . $res . '">Đăng ký thành viên</a>' ?></li>
         
     </div>
