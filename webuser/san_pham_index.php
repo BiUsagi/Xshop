@@ -101,6 +101,8 @@ if (isset($_GET['prd'])) {
             }else{
                 $_SESSION['mycart'] = array();
             }
+            // Làm cho các chỉ số trong mảng liên tiếp lại
+            $_SESSION['mycart'] = array_values($_SESSION['mycart']);
             // include "viewcart.php";
             header('Location: index.php?prd=viewcart');
             break;

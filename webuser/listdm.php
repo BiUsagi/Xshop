@@ -48,7 +48,13 @@
 
 
         echo '    </div> ';
-        echo ' <div> <a href="# "class="cart-button"><i class="fa-solid fa-cart-plus fa-2xl "></i></a>  </div>';
+        echo   '<form action="index.php?prd=addtocart" method="post">';
+        echo    '<input type="hidden" name="id" value="'.$ma_hh.'">';
+        echo    '<input type="hidden" name="name" value="'. $ten_hh .'">';
+        echo    '<input type="hidden" name="img" value="' . $img . '">';
+        echo    '<input type="hidden" name="price" value="'.$gia_ban.'">';
+        echo    '<input type="submit" value="+"  class="cart-button fa-solid fa-2xl" name="addtocart" >';
+        echo    '</form>'; 
         echo '    </div> ';
         echo '    </div> ';
         
