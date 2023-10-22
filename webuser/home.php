@@ -59,7 +59,7 @@
         echo    '<input type="hidden" name="img" value="' . $img . '">';
         echo    '<input type="hidden" name="price" value="'.$gia_ban.'">';
         echo    '<input type="submit" value="+"  class="cart-button fa-solid fa-2xl" name="addtocart" >';
-        echo   '</form>'; 
+        echo    '</form>'; 
         echo '    </div> ';
         echo '    </div> ';
         

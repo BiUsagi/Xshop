@@ -1,7 +1,7 @@
             <?php
                 if(isset($_SESSION['user'])){
                     $ho_ten = $_SESSION['user']['user'];
-                    // $email=$_SESSION['user']['email'];
+                    $email=$_SESSION['user']['email'];
                 }else{
                     $ho_ten="";
                     $email="";
