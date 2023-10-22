@@ -112,6 +112,7 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
         <div class="col-md-5">
             <?php
             $hinhpath = "../admin/sanpham/uploads/" . $product['hinh'];
+            $img = "<img src='" . $hinhpath . "' class=' img-cover'>";
             echo "<img src='" . $hinhpath . "' class=' img-cover'>";
             ?>
 
@@ -150,7 +151,13 @@ $gia_ban = $product['don_gia'] / 100 * (100 - $product['giam_gia']);
 
                 <!-- Thêm nút "Thêm vào giỏ hàng" và "Mua ngay" -->
                 <div class="btn-group">
-                    <button class="btn btn-primary btn-lg">Thêm vào giỏ hàng</button>
+                    <form action="index.php?prd=addtocart" method="post">
+                        <input type="hidden" name="id" value="<?php echo $product['ma_hh'];?>">
+                        <input type="hidden" name="name" value="<?php echo $product['ten_hh'];?>">
+                        <input type="hidden" name="img" value="<?php echo $img;?>">
+                        <input type="hidden" name="price" value="<?php echo $gia_ban;?>">
+                        <input type="submit" value="Thêm vào giỏ hàng"  class="btn btn-primary btn-lg" name="addtocart" >
+                    </form>
                     <div class="mx-2"></div> <!-- Thêm khoảng cách giữa hai nút -->
                     <button class="btn btn-success btn-lg">Mua ngay</button>
                 </div>
