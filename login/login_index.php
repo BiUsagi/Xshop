@@ -87,6 +87,11 @@ if (isset($_GET['act'])) {
             include "setpw.php";
             break;
 
+        case 'quenmk':
+            $_SESSION['act'] = $_GET['act'];
+            include "quenmk.php";
+            break;
+
         default:
             $_SESSION['act'] = 'login';
             include "login.php";
