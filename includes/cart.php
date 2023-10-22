@@ -4,49 +4,92 @@ function viewcart($dell)
     $tong = 0;
     $i = 0;
     if ($dell == 1) {
-        $xoasp_th = '<th>Thao tác</th>';
-        $xoasp_td2 = '<td></td>';
+        $xoasp_th = '<th class="custom-th">Thao tác</th>';
+
+        echo ' <tr>
+        <th class="custom-th">Hình</th>
+        <th class="custom-th">Sản phẩm</th>
+        <th class="custom-th">Đơn giá</th>
+        <th class="custom-th">Số lượng</th>
+        <th class="custom-th">Thành tiền</th>
+        ' . $xoasp_th . '
+        </tr>';
     } else {
-        $xoasp_th = '';
-        $xoasp_td2 = '';
+        echo ' <tr>
+        <th class="custom-th">Hình</th>
+        <th class="custom-th">Sản phẩm</th>
+        <th class="custom-th">Đơn giá</th>
+        <th class="custom-th">Số lượng</th>
+        <th class="custom-th">Thành tiền</th>
+        </tr>';
     }
-    echo ' <tr>
-                                <th>Hình</th>
-                                <th>Sản phẩm</th>
-                                <th>Đơn giá</th>
-                                <th>Số lượng</th>
-                                <th>Thành tiền</th>
-                                ' . $xoasp_th . '
-                                </tr>';
+   
 
     foreach ($_SESSION['mycart'] as $cart) {
         $thanhtien = $cart[3] * $cart[4];
         $tong = $tong + $thanhtien;
         if ($dell == 1) {
-            $xoasp_td = '<td><a href="index.php?prd=delcart&idcart=' . $i . '"><input type="button" value="Xóa"></a></td>';
+            $xoasp_td = '<a href="index.php?prd=delcart&idcart=' . $i . '"><input type="button" value="Xóa" class="custom-btn-danger"></a>';
+                echo '<tr>';
+                echo '<td class="custom-td"> ' . $cart[2] . '</td>';
+                echo '<td class="custom-td"> ' . $cart[1] . '</td>';
+                echo '<td class="custom-td">' .number_format($cart[3], 0, ',', '.') . '₫ </td>'; 
+                echo '<td class="custom-td">' . $cart[4] . '</td>';
+                echo '<td class="custom-td">' .number_format($cart[5], 0, ',', '.') . '₫ </td>';
+                echo '<td class="custom-td">' . $xoasp_td . '</td>';
+                echo '</tr> ';
         } else {
-            $xoasp_td = '';
+            echo '<tr>';
+            echo '<td class="custom-td"> ' . $cart[2] . '</td>';
+            echo '<td class="custom-td"> ' . $cart[1] . '</td>';
+            echo '<td class="custom-td">' .number_format($cart[3], 0, ',', '.') . '₫ </td>'; 
+            echo '<td class="custom-td">' . $cart[4] . '</td>';
+            echo '<td class="custom-td">' .number_format($cart[5], 0, ',', '.') . '₫ </td>';
+            echo '</tr> ';
         }
+        $i += 1;
+    }
 
+                                echo '<tr> 
+                                <td colspan="4" class="custom-td custom-td-title">Tổng đơn hàng</td>';
+                                echo '<td class="custom-td">' .number_format($tong, 0, ',', '.') . '₫ </td>';
+                                if ($dell == 1) {
+                                echo '<td class="custom-td"></td>';
+                                }
+                                echo '</tr>';
+}
 
+function view_bill($listbill){ //bill chi tiet
+    $tong = 0;
+    $i = 0;
+    echo ' <tr>
+                                <th  class="custom-th">Hình</th>
+                                <th  class="custom-th">Sản phẩm</th>
+                                <th  class="custom-th">Đơn giá</th>
+                                <th  class="custom-th">Số lượng</th>
+                                <th  class="custom-th">Thành tiền</th>
+                                </tr>';
+
+    foreach ($listbill as $cart) {
+        $tong = $tong + $cart['price'];
+       
         echo '<tr>';
-        echo '<td> ' . $cart[2] . '</td>';
-        echo '<td>' . $cart[1] . '</td>';
-        echo '<td>' . $cart[3] . '</td>';
-        echo '<td>' . $cart[4] . '</td>';
-        echo '<td>' . $cart[5] . '</td>';
-        echo '<td>' . $xoasp_td . '</td>';
+        echo '<td class="custom-td"> ' . $cart['img'] . '</td>';
+        echo '<td class="custom-td">' . $cart['name'] . '</td>';
+        echo '<td class="custom-td">' .number_format($cart['price'], 0, ',', '.') . '₫ </td>';
+        echo '<td class="custom-td">' . $cart['soluong'] . '</td>';
+        echo '<td class="custom-td">' .number_format($cart['thanhtien'], 0, ',', '.') . '₫ </td>';
         echo '</tr> ';
         $i += 1;
     }
 
     echo '<tr> 
-                                <td colspan="4">Tổng đơn hàng</td>
-                                <td>' . $tong . '</td>
-                                ' . $xoasp_td2 . '
-                                <td></td>
+                                <td colspan="4" class="custom-td custom-td-title">Tổng đơn hàng</td>';
+                                echo '<td class="custom-td">' .number_format($tong, 0, ',', '.') . '₫ </td>
                                 </tr>';
 }
+
+
 function tongdonhang()
 {
     $tong = 0;
@@ -115,33 +158,5 @@ function loadall_cart($id){
 }
 
 
-function view_bill($listbill){ //bill chi tiet
-    $tong = 0;
-    $i = 0;
-    echo ' <tr>
-                                <th>Hình</th>
-                                <th>Sản phẩm</th>
-                                <th>Đơn giá</th>
-                                <th>Số lượng</th>
-                                <th>Thành tiền</th>
-                                </tr>';
 
-    foreach ($listbill as $cart) {
-        $tong = $tong + $cart['price'];
-       
-        echo '<tr>';
-        echo '<td> ' . $cart['img'] . '</td>';
-        echo '<td>' . $cart['name'] . '</td>';
-        echo '<td>' . $cart['price'] . '</td>';
-        echo '<td>' . $cart['soluong'] . '</td>';
-        echo '<td>' . $cart['thanhtien'] . '</td>';
-        echo '</tr> ';
-        $i += 1;
-    }
-
-    echo '<tr> 
-                                <td colspan="4">Tổng đơn hàng</td>
-                                <td>' . $tong . '</td>
-                                </tr>';
-}
 ?>

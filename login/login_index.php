@@ -38,6 +38,7 @@ if (isset($_GET['act'])) {
                             if ($mat_khau == $mk) {
                                 // $ma_kh = $_SESSION["user"] ;
                                 $_SESSION["user"] = $ma_kh;
+
                                 // echo $ma_kh;
                                 echo '<script>window.location.href = "./index.php?act=logout&makh=' . $ma_kh . '";</script>';
                                 // header("location: index.php?act=logout&makh=$ma_kh");

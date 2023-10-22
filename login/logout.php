@@ -13,7 +13,6 @@
     // echo '<meta http-equiv="refresh" content="0; url=index.php?act=login">';
     // header("location: index.php?act=login");
 
-
 //    echo $_SESSION['user'];
 ?>
 
@@ -27,6 +26,7 @@
     <div class="container">
         <?php
             extract(khach_hang_select_by_id($_SESSION['user']));
+           
             $test1 = ($_SESSION['user']);
 
             $hinhpath = "./admin/khachhang/uploads/" . $hinh;
