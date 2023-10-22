@@ -36,14 +36,18 @@ if (isset($_GET['act'])) {
                     if ($tendn1 != '' && $mk != '') {
                         if ($ma_kh == $tendn1) {
                             if ($mat_khau == $mk) {
-                                // $ma_kh = $_SESSION["user"] ;
-                                $_SESSION["user"] = $ma_kh;
 
-                                // echo $ma_kh;
-                                echo '<script>window.location.href = "./index.php?act=logout&makh=' . $ma_kh . '";</script>';
-                                // header("location: index.php?act=logout&makh=$ma_kh");
-                                // echo '<meta http-equiv="refresh" content="0; url=index.php?makh='.$ma_kh.'&act=logout" >';
-
+                                //lay thong tin
+                                $khachhang = khach_hang_select_by_id($ma_kh);
+                                extract($khachhang);
+                                if($kich_hoat == 1){
+                                    $thongbao = "Tài khoản đã bị khóa.";
+                                }else{
+                                    // $ma_kh = $_SESSION["user"] ;
+                                    $_SESSION["user"] = $ma_kh;
+                                    // chuyển trang
+                                    echo '<script>window.location.href = "./index.php?act=logout&makh=' . $ma_kh . '";</script>';
+                                }
                             } else {
                                 $thongbao = "Sai mật khẩu";
                             }
