@@ -58,7 +58,6 @@
 
                                 // Kết nối đến cơ sở dữ liệu
                                 $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-
                                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                                 // Bắt đầu giao dịch
@@ -67,6 +66,10 @@
                                 // Xóa tất cả bình luận của hàng hóa
                                 $ma_hh = $_GET['mahh']; // Đặt mã hàng hóa cần xóa
                                 $sql_delete_comments = "DELETE FROM binh_luan WHERE ma_hh = :ma_hh";
+                                $sql_update_cart = "UPDATE cart SET ma_hh = null WHERE ma_hh = :ma_hh";
+                                $stmt = $conn->prepare($sql_update_cart);
+                                $stmt->bindParam(':ma_hh', $ma_hh, PDO::PARAM_INT);
+                                $stmt->execute();
                                 $stmt = $conn->prepare($sql_delete_comments);
                                 $stmt->bindParam(':ma_hh', $ma_hh, PDO::PARAM_INT);
                                 $stmt->execute();
