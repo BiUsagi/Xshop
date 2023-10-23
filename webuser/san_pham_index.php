@@ -113,6 +113,8 @@ if (isset($_GET['prd'])) {
         case 'billconfirm':
             // Kiểm tra xem có dữ liệu trong phiên hay không
             if (isset($_POST['dongydathang'])&&$_POST['dongydathang']) {
+                if(isset($_SESSION['user'])) $iduser = $_SESSION['user'];
+                else $iduser = 0;
                 $name = $_POST['ho_ten'];
                 $email =  $_POST['email'];
                 $address =  $_POST['dia_chi'];
@@ -121,7 +123,7 @@ if (isset($_GET['prd'])) {
                 $tongdonhang = tongdonhang();
                 $pttt = $_POST['pttt'];
                 $idbill = 0;
-                $idbill = insert_bill($name, $email, $address, $tel,$pttt, $ngaydathang, $tongdonhang);
+                $idbill = insert_bill($iduser, $name, $email, $address, $tel,$pttt, $ngaydathang, $tongdonhang);
                 $ma_kh = $_SESSION['user'];
 
                 foreach ($_SESSION['mycart'] as $cart) {
@@ -136,6 +138,10 @@ if (isset($_GET['prd'])) {
             $billct = loadall_cart($idbill);
             include 'billconfirm.php';;
             break;  
+        case 'mybill':
+            $listbill = loadall_bill($_SESSION['user']);
+            include 'mybill.php';
+            break;
 
         default:
             include "webuser/home.php";
