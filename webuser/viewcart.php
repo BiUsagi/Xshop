@@ -103,7 +103,7 @@
         <a href="index.php?prd=bill">
             <input type="submit" class="custom-btn" value="ĐẶT HÀNG">
         </a>
-        <a href="index.php?act=delcart">
+        <a href="index.php?prd=delcart">
             <input type="button" class="custom-btn custom-btn-danger1" value="XÓA GIỎ HÀNG">
         </a>
     </div>
