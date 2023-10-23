@@ -16,6 +16,7 @@ include "includes/cart.php";
 
 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +156,11 @@ include "includes/cart.php";
             </div>
 
         </div>
-        <div class="row1 mb footer ">
+        <!-- <div class="row1 mb footer ">
+            Copyright o 2020
+        </div> -->
+
+        <div class="footernew row1 mb footer">
             Copyright o 2020
         </div>
 

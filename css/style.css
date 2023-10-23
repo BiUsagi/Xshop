@@ -476,3 +476,11 @@ iframe {
     height: 100%;
     overflow: hidden;
 }
+.footernew{
+    background-color: #000;
+    color: white;
+}
+
+.menu>ul>li>a{
+    text-align: center;
+}

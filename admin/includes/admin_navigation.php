@@ -21,7 +21,7 @@
 
 
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Nhóm 2 <b
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['user'] ?> <b
                     class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
