@@ -37,10 +37,10 @@ include "includes/cart.php";
 <body>
     <div class="boxcenter">
 
-        <div class="row1 mb header ">
+        <!-- <div class="row1 mb header ">
             <h1> SIÊU THỊ TRỰC TUYẾN</h1>
 
-        </div>
+        </div> -->
         <div class="row1 mb menu">
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>
